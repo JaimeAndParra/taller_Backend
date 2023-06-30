@@ -4,8 +4,10 @@ import {Router} from 'express'
 import logger from '../../../utils/logger'
 import { DoctorController, DoctorControllerImpl } from './controller'
 import { DoctorService, DoctorServiceImpl } from './service'
+import { DoctorRepository } from './repository'
 
-const doctorService: DoctorService = new DoctorServiceImpl();
+const doctorRepository: DoctorRepository = new DoctorRepository();
+const doctorService: DoctorService = new DoctorServiceImpl(doctorRepository);
 const doctorController: DoctorController = new DoctorControllerImpl(doctorService);
 
 const router = Router()

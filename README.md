@@ -13,5 +13,8 @@
 10. Se utiliza winston para el control de los loggs **npm install winston --save**. Se crea en la carpeta util ya que es utilizable por todos los servicios del programa, y así, es posible reutilizarlo.
 
 
-### Interfaces
+### Pruebas unitarias
 
+1. Se utiliza la libreria chai. **npm install --save-dev  chai chai-http chai-spies @types/chai @types/chai-http @types/chai-spies**
+2. Jest permite ejecutar las pruebas **npm install --save-dev jest ts-jest @types/jest**
+3. Las pruebas unitarias con jest se ejecutan como **npm jest**
