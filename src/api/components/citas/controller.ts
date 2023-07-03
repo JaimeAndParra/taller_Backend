@@ -1,35 +1,92 @@
-import {Cita} from './model'
 import {Request, Response} from 'express'
-import { CitaService } from './service'
-import { ParamsDictionary } from 'express-serve-static-core'
-import { ParsedQs } from 'qs'
+import { AppointmentService } from './service'
+import logger from '../../../utils/logger'
 
-/* el controlador maneja los servicios a traves de las interfaces */
-/* La interface solo tiene entradas/salidas y se encarga de 
-   dar una definicion del servicio, sin detallar la manera en que lo hace */
-
-export interface CitaController {
-    createCita(req: Request, res: Response): void
-    getAllCitas(req: Request, res: Response): void
+export interface AppointmentController {
+    /* getAllPatients(req: Request, res: Response): Promise<void> */
+    createAppointment(req: Request, res: Response): Promise<void>
+    getAppointmentById(req: Request, res: Response): Promise<void>
+    /* getPatientByCedula(req: Request, res: Response): Promise<void> */
+    /* updatePatientById(req: Request, res: Response): Promise<void> */
+    /* deletePatientById(req: Request, res: Response): Promise<void> */
 }
 
-export class CitaControllerImpl implements CitaController {
+export class AppointmentControllerImpl implements AppointmentController {
 
-    private CitaService: CitaService;
+    private appointmentService: AppointmentService;
 
-    constructor (CitaService: CitaService){
-        this.CitaService = CitaService;
+    constructor (appointmentService: AppointmentService){
+        this.appointmentService = appointmentService;
     }
     
-    public createCita(req: Request, res: Response): void {
-        const cita: Cita | null = this.CitaService.createCita();
-        res.json(cita);
+/*     public async getAllPatients(req: Request, res: Response): Promise<void> {
+        await this.patientService.getAllPatients()
+        .then((getAllPatients)=>{
+            res.status(200).json(getAllPatients);
+        },
+        (error) => {
+            res.status(400).json({message: `${error.message}`}) 
+        })
+    } */
+
+    public async createAppointment(req: Request, res: Response): Promise<void> {
+        const appointmentReq = req.body
+        await this.appointmentService.createAppointment(appointmentReq)
+        .then((appointmentRes)=>{
+            logger.info(`New appointment created succesfully: ${JSON.stringify(appointmentRes)}`)
+            res.status(201).json(appointmentRes)
+        },
+        (error) => {
+            res.status(400).json({message: `${error.message}`}) 
+        })
     }
 
-    public getAllCitas(req: Request, res: Response): void {
-        const cita: Cita[] = this.CitaService.getAllCitas();
-        res.json(cita);
+    public async getAppointmentById(req: Request, res: Response):Promise<void> {
+        const id = req.params.id
+        await this.appointmentService.getAppointmentById(id)
+        .then((appointment)=>{
+            res.status(200).json(appointment)
+        },
+        (error)=>{
+            res.status(400).json({message: error.message}) 
+        })
     }
+
+ /*    public async getPatientByCedula(req: Request, res: Response):Promise<void> {
+        const patientReq = req.body
+        const identificacion = patientReq.identificacion
+        await this.patientService.getPatientByCedula(identificacion)
+        .then((patient)=>{
+            res.status(200).json(patient)
+        },
+        (error)=>{
+            res.status(400).json({message: error.message}) 
+        })
+    } */
+
+/*     public async updatePatientById(req: Request, res: Response):Promise<void> {
+        const id = req.params.id
+        const patientReq = req.body; 
+        await this.patientService.updatePatientById(id, patientReq)
+        .then((patient)=>{
+            logger.info(`Patient updated succesfully: ${JSON.stringify(patient)}`)
+            res.status(200).json(patient)
+        },
+        (error)=>{
+            res.status(400).json({message: error.message}) 
+        })
+    } */
+
+/*     public async deletePatientById(req: Request, res: Response):Promise<void> {
+        const id = req.params.id
+        await this.patientService.deletePatientById(id)
+        .then((patient)=>{
+            res.status(200).json({message: "Patient deleted succesfully"})
+            logger.info(`Patient deleted succesfully: ${JSON.stringify(patient)}`)
+        },
+        (error)=>{
+            res.status(400).json({message: error.message}) 
+        })
+    } */
 }
-
 

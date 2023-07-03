@@ -1,13 +1,17 @@
-/* Un modelo es una estructura de datos que se implementa a traves de una interface */
-/* Las interfaces permiten desasociar  */
-
-export interface Paciente {
-    id_paciente: number,
+export interface Patient {
+    id_paciente?: number,
     nombre: string,
     apellido: string,
     identificacion: string,
-    telefono: string,
-    createdAt?: Date, 
-    updatedAt?: Date, 
+    telefono?: string,
+    created_at?: Date, 
+    updated_at?: Date, 
+}
+
+export interface PatientReq{
+    nombre: string,
+    apellido: string,
+    identificacion: string,
+    telefono?: string,
 }
 

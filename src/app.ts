@@ -4,6 +4,7 @@
 import express, {Request, Response} from 'express'
 import logger from './utils/logger'
 import routes from './api/routes'
+import errorHandlerMiddleware from './middleware/errorHandler'
 
 const app = express()
 const port = 8087 
@@ -11,7 +12,9 @@ const port = 8087
 // Convierte los body de los request en json
 app.use(express.json())
 
+app.use(errorHandlerMiddleware)
 app.use('/api/v1', routes)
+
 
 app.listen(port, () => {
     logger.info('')

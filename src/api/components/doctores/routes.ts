@@ -1,7 +1,6 @@
 /* Express permite configurar y levantar la aplicacion */
 
 import {Router} from 'express'
-import logger from '../../../utils/logger'
 import { DoctorController, DoctorControllerImpl } from './controller'
 import { DoctorService, DoctorServiceImpl } from './service'
 import { DoctorRepository } from './repository'
@@ -12,7 +11,10 @@ const doctorController: DoctorController = new DoctorControllerImpl(doctorServic
 
 const router = Router()
 router.get('/list', doctorController.getAllDoctors.bind(doctorController));
-router.get('/create', doctorController.createDoctor.bind(doctorController));
+router.post('/create', doctorController.createDoctor.bind(doctorController));
+router.get('/:id', doctorController.getDoctorById.bind(doctorController));
+router.put('/:id', doctorController.updateDoctorById.bind(doctorController));
+router.delete('/:id', doctorController.deleteDoctorById.bind(doctorController));
 
 export default router
 

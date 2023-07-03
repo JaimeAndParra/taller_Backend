@@ -1,24 +1,14 @@
-/* Express permite configurar y levantar la aplicacion */
-
 import {Router} from 'express'
-import logger from '../../../utils/logger'
-import { CitaController, CitaControllerImpl } from './controller'
-import { CitaService, CitaServiceImpl } from './service'
+import { AppointmentController, AppointmentControllerImpl } from './controller'
+import { AppointmentService, AppointmentServiceImpl } from './service'
+import { AppointmentRepository } from './repository'
 
-const CitaService: CitaService = new CitaServiceImpl();
-const CitaController: CitaController = new CitaControllerImpl(CitaService);
+const appointmentRepository: AppointmentRepository = new AppointmentRepository();
+const appointmentService: AppointmentService = new AppointmentServiceImpl(appointmentRepository);
+const appointmentController: AppointmentController = new AppointmentControllerImpl(appointmentService);
 
 const router = Router()
-router.post('/create', CitaController.createCita.bind(CitaController));
-router.get('/list', CitaController.getAllCitas.bind(CitaController));
+router.post('/create', appointmentController.createAppointment.bind(appointmentController ));
+router.get('/:id', appointmentController.getAppointmentById.bind(appointmentController ));
 
 export default router
-
-/* router.get('', (req: Request, res: Response) => {
-    const doctores = [
-        {id_doctor: 1, nombre: "John", apellido: "Doe", especialidad: "Pediatria", consultorio: 101, correo: "john.doe@gmail.com"},
-        {id_doctor: 2, nombre: "Jose", apellido: "Rodriguez", especialidad: "Medicina General", consultorio: 102, correo: "jose.rodriguez@gmail.com"},
-    ];
-    res.json(doctores);
-    logger.info("Access to doctores success: ");
-}) */

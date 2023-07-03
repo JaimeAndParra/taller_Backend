@@ -1,24 +1,134 @@
-/* El servicio es quien se encarga de ejecutar el modelo */
-/* La interface se encarga de indicarle al controlador el uso del servicio */
+import { RecordNotFoundError, PatientError, MustBeANumber } from '../../../config/customError';
+import { Patient, PatientReq} from './model'
+import { PatientRepository } from './repository';
 
-import {Paciente} from './model'
-
-export interface PacienteService {
-    getPaciente(): Paciente|null
-    createPaciente(): Paciente|null
+export interface PatientService {
+    getAllPatients(): Promise<Patient[]>,
+    createPatient(patientReq: PatientReq): Promise<Patient>,
+    getPatientById(idReq: string): Promise<Patient>,
+    getPatientByCedula(cedulaReq: string): Promise<Patient>,
+    updatePatientById(idReq: string, update: Partial<PatientReq>): Promise<Patient>
+    deletePatientById(idReq: string): Promise<Patient>,
 }
 
-export class PacienteServiceImpl implements PacienteService {
-    public getPaciente(): Paciente|null {
+export class PatientServiceImpl implements PatientService {
 
-        const paciente = [
-            {id_paciente: 1, nombre: "John", apellido: "Doe", especialidad: "Pediatria", consultorio: "101", correo: "john.doe@gmail.com", createdAt: new Date()},
-        ];
+    private patientRepository: PatientRepository;
 
-        return null;
+    constructor(patientRepository: PatientRepository){
+        this.patientRepository = patientRepository;
     }
 
-    public createPaciente(): Paciente|null {
-        return null
+    public getAllPatients(): Promise<Patient[]> {
+        try{
+            return this.patientRepository.getAllPatients();
+        }catch(error){
+            throw new PatientError("Error getting all patients", "patientService", error)
+        }
+    }
+
+    public createPatient(patientReq: PatientReq): Promise<Patient> {
+        
+        try{   
+            const patient: Patient = {
+                nombre: patientReq.nombre,
+                apellido: patientReq.apellido,
+                identificacion: patientReq.identificacion,
+                telefono: patientReq.telefono,
+                created_at: new Date(),
+                updated_at: new Date()
+            }
+            return this.patientRepository.createPatient(patient);
+        }catch(error){
+            throw new PatientError("Error creating a new patient", "patientService", error)
+        }   
+    }
+
+    public async getPatientById(idReq: string): Promise <Patient>{
+        try{
+            const id = parseInt(idReq);
+            if(isNaN(id)){
+                throw new MustBeANumber();
+            }
+            const existPatient = await this.patientRepository.getPatientById(id);
+            if (!existPatient){
+                throw new RecordNotFoundError();
+            }
+            return existPatient
+        }catch(error){
+            if(error instanceof RecordNotFoundError){
+                throw error;
+            }else if(error instanceof MustBeANumber){
+                throw error;
+            }else{
+                throw new PatientError("Error getting patient", "PatientService", error)
+            }
+        }
+    }
+
+    public async getPatientByCedula(identificacion: string): Promise <Patient>{
+        try{
+            if (typeof identificacion == 'undefined'){
+                throw new RecordNotFoundError();
+            }
+            const existPatient = await this.patientRepository.getPatientByCedula(identificacion);
+            if (!existPatient){
+                throw new RecordNotFoundError();
+            }
+            return existPatient
+        }catch(error){
+            if(error instanceof RecordNotFoundError){
+                throw error;
+            }else{
+                throw new PatientError("Error getting patient", "PatientService", error)
+            }
+        }
+    }
+
+    public async updatePatientById(idReq: string, update: Partial<PatientReq>): Promise<Patient>{
+        try{
+            const id = parseInt(idReq);
+            if(isNaN(id)){
+                throw new MustBeANumber();
+            }
+            const existPatient = await this.patientRepository.getPatientById(id);
+            if (!existPatient){
+                throw new RecordNotFoundError();
+            }
+            const updatePatient = {...existPatient, ...update};
+            this.patientRepository.updatePatientById(id, updatePatient);
+            return updatePatient;
+        }catch(error){
+            if(error instanceof RecordNotFoundError){
+                throw error;
+            }else if(error instanceof MustBeANumber){
+                throw error;
+            }else{
+                throw new PatientError("Failed to update patient", "patientService", error)
+            }
+        }
+    }
+
+        public async deletePatientById(idReq: string): Promise<Patient>{
+        try{
+            const id = parseInt(idReq);
+            if(isNaN(id)){
+                throw new MustBeANumber();
+            }
+            const existPatient = await this.patientRepository.getPatientById(id);
+            if (!existPatient){
+                throw new RecordNotFoundError();
+            }
+            this.patientRepository.deletePatientById(id);
+            return existPatient
+        }catch(error){
+            if(error instanceof RecordNotFoundError){
+                throw error;
+            }else if(error instanceof MustBeANumber){
+                throw error;
+            }else{
+                throw new PatientError("Failed to delete patient", "PatientService", error) 
+            }
+        }
     }
 }

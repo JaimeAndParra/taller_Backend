@@ -15,7 +15,10 @@ describe('DoctorController', () => {
     beforeEach(() => {
         doctorService = {
             getAllDoctors: jest.fn(),
-            createDoctor: jest.fn()
+            createDoctor: jest.fn(),
+            getDoctorById: jest.fn(),
+            updateDoctorById: jest.fn(),
+            deleteDoctorById: jest.fn()
         },
         doctorController = new DoctorControllerImpl(doctorService)
         /* Valores que retorna el mock */
@@ -48,7 +51,7 @@ describe('DoctorController', () => {
             await doctorController.getAllDoctors(reqMock, resMock)
 
             expect(doctorService.getAllDoctors).toHaveBeenCalled()
-            expect(resMock.json).toHaveBeenCalledWith({message: "Error getting all doctors"})
+            expect(resMock.json).toHaveBeenCalledWith({message: "Database Error"})
             expect(resMock.status).toHaveBeenCalledWith(400)
         })
 
@@ -79,10 +82,39 @@ describe('DoctorController', () => {
             await doctorController.createDoctor(reqMock, resMock)
 
             expect(doctorService.createDoctor).toHaveBeenCalledWith({})
-            expect(resMock.json).toHaveBeenCalledWith({message: "Error creating doctor"})
+            expect(resMock.json).toHaveBeenCalledWith({message: "Database Error"})
             expect(resMock.status).toHaveBeenCalledWith(400)
         })
-
     })
+    describe('getDoctorByID', () => {
+        it('should return a doctor by id', async () => {
+
+            (reqMock.params) = {id: "1"};
+            const doctor: Doctor = {id_doctor:1, nombre:"Carlos", apellido:"Caceres", especialidad:"Medicina General", consultorio:"100", correo:"carcec@gmail.com"};
+
+            (doctorService.getDoctorById as jest.Mock).mockResolvedValue(doctor)
+
+            /* Hace el llamado a getAllDoctors */
+            await doctorController.getDoctorById(reqMock, resMock)
+
+            /* Valores esperados */
+            expect(doctorService.getDoctorById).toHaveBeenCalledWith(1)  /* Debe ser llamado 1 sola vez */
+            expect(resMock.json).toHaveBeenCalledWith(doctor)      /* El json que debe retornar es doctores */
+            expect(resMock.status).toHaveBeenCalledWith(200)        /* El status que debe retornar es 200 */
+        })
+
+        it('should return an 400 if an error exist', async () => {
+            const error = new Error("Internal Server error");
+            (reqMock.params) = {id: "1"};
+
+            (doctorService.getDoctorById as jest.Mock).mockRejectedValue(error);
+            await doctorController.getDoctorById(reqMock, resMock)
+
+            expect(doctorService.getDoctorById).toHaveBeenCalledWith(1)
+            expect(resMock.json).toHaveBeenCalledWith({message: "Internal Server error"})
+            expect(resMock.status).toHaveBeenCalledWith(400)
+        })
+    })
+
 
 })
