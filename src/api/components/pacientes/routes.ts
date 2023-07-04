@@ -9,7 +9,7 @@ const patientController: PatientController = new PatientControllerImpl(patientSe
 
 const router = Router()
 router.get('/list', patientController.getAllPatients.bind(patientController));
-router.get('/search', patientController.getPatientByCedula.bind(patientController));
+router.post('/search', patientController.getPatientByIdentificacion.bind(patientController));
 router.post('/create', patientController.createPatient.bind(patientController));
 router.get('/:id', patientController.getPatientById.bind(patientController));
 router.put('/:id', patientController.updatePatientById.bind(patientController));

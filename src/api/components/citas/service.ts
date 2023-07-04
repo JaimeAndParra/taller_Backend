@@ -1,4 +1,4 @@
-import { RecordNotFoundError, AppointmentError, MustBeANumber, CustomError } from '../../../config/customError';
+import { RecordNotFoundError, CustomError, CreateError, GetAllError, GetError, DeleteError } from '../../../utils/customError';
 import { DoctorRepository } from '../doctores/repository';
 import { PatientRepository } from '../pacientes/repository';
 import { DoctorService, DoctorServiceImpl } from '../doctores/service';
@@ -7,11 +7,11 @@ import { Appointment, AppointmentReq, AppointmentRes} from './model'
 import { AppointmentRepository } from './repository';
 
 export interface AppointmentService {
-    /* getAllPatients(): Promise<Patient[]>, */
+    getAllAppointment(): Promise<Appointment[]>,
     createAppointment(appointmentReq: AppointmentReq): Promise<AppointmentRes>,
-    getAppointmentById(idReq: string): Promise<AppointmentRes>,
-    /* updatePatientById(idReq: string, update: Partial<PatientReq>): Promise<Patient>
-    deletePatientById(idReq: string): Promise<Patient>, */
+    getAppointmentById(id: number): Promise<AppointmentRes>,
+    getAppointmentsByPatient(identificacion: string): Promise <Appointment[]>,
+    deleteAppointmentById(id: number): Promise<Appointment>
 }
 
 export class AppointmentServiceImpl implements AppointmentService {
@@ -26,37 +26,38 @@ export class AppointmentServiceImpl implements AppointmentService {
         this.patientService = new PatientServiceImpl(new PatientRepository());
     }
 
-   /*  public getAllPatients(): Promise<Patient[]> {
+    public getAllAppointment(): Promise<Appointment[]> {
         try{
-            return this.patientRepository.getAllPatients();
+            return this.appointmentRepository.getAllAppointment();
         }catch(error){
-            throw new PatientError("Error getting all patients", "patientService", error)
+            throw new GetAllError('appointment', 'AppointmentService', error);
         }
-    } */
+    }
 
     public async createAppointment(appointmentReq: AppointmentReq): Promise<AppointmentRes> {
-        
-        try{
-            const patient = await this.patientService.getPatientByCedula(appointmentReq.identificacionPaciente);            
             
-            if (typeof patient.id_paciente == 'undefined'){
-                throw new RecordNotFoundError();
+        try{
+            const identificacionPaciente = appointmentReq.identificacionPaciente;
+            
+            const patient:any = await this.patientService.getPatientByIdentificacion(identificacionPaciente);
+            if (!patient){
+                throw new RecordNotFoundError("Patient");
             }
 
-            const doctor = await this.doctorService.getDoctorById(appointmentReq.id_doctor);
+            const id_doctor = parseInt(appointmentReq.id_doctor);
+            const doctor:any = await this.doctorService.getDoctorById(id_doctor);
             if (!doctor){
-                throw new RecordNotFoundError();
+                throw new RecordNotFoundError("Doctor");
             }
 
             if (doctor.especialidad !== appointmentReq.especialidad){
-                throw new CustomError(`Doctor ${doctor.nombre} is not from that especialidad`);
+                throw new CustomError(`Doctor ${doctor.apellido} is not from that especialidad`);
             }
 
             const appointment: Appointment = {
-                id_doctor: parseInt(appointmentReq.id_doctor),
-                id_paciente: patient.id_paciente,
+                id_doctor: id_doctor,
+                id_paciente: patient[0].id_paciente,
                 horario: appointmentReq.horario,
-                especialidad: appointmentReq.especialidad,
                 created_at: new Date(), 
                 updated_at: new Date(), 
             }
@@ -74,35 +75,25 @@ export class AppointmentServiceImpl implements AppointmentService {
             return appointmentRes
 
         }catch(error){
-            if(error instanceof CustomError){
+            if (error instanceof RecordNotFoundError){
+                throw error;
+            }else if(error instanceof CustomError){
                 throw error;
             }else{
-                throw new AppointmentError("Error creating appointment", "AppointmentService", error)
+                throw new CreateError('appointment', 'AppointmentService', error);
             }
         }   
     }
 
-    public async getAppointmentById(idReq: string): Promise <AppointmentRes>{
-        try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
-            }
-            
+    public async getAppointmentById(id: number): Promise <AppointmentRes>{
+        try{            
             const existAppointment = await this.appointmentRepository.getAppointmentById(id);
             if (!existAppointment){
-                throw new RecordNotFoundError();
+                throw new RecordNotFoundError("Appointment");
             }
 
-            const doctor = await this.doctorService.getDoctorById(existAppointment.id_doctor.toString());
-            if (!doctor){
-                throw new CustomError("Ups. The doctor no longer works with us.");
-            }
-
-            const patient = await this.patientService.getPatientById(existAppointment.id_paciente.toString());
-            if (!patient){
-                throw new CustomError("Ups. You are no longer affiliated with us.");
-            }
+            const doctor:any = await this.doctorService.getDoctorById(existAppointment.id_doctor);
+            const patient = await this.patientService.getPatientById(existAppointment.id_paciente);
             
             const appointmentRes: AppointmentRes = {
                 identificacionPaciente: patient.identificacion,
@@ -113,62 +104,54 @@ export class AppointmentServiceImpl implements AppointmentService {
             }
 
             return appointmentRes
-
         }catch(error){
-            if(error instanceof RecordNotFoundError){
-                throw error;
-            }else if(error instanceof MustBeANumber){
+            if (error instanceof RecordNotFoundError){
                 throw error;
             }else{
-                throw new AppointmentError("Error getting appointment", "AppointmentService", error)
+                throw new GetError('appointment', 'AppointmentService', error);
             }
         }
     }
 
-    /* public async updatePatientById(idReq: string, update: Partial<PatientReq>): Promise<Patient>{
+    public async getAppointmentsByPatient(identificacion: string): Promise <Appointment[]>{
         try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
+            const patient:any = await this.patientService.getPatientByIdentificacion(identificacion);
+            if (!patient){
+                throw new RecordNotFoundError("Patient");
             }
-            const existPatient = await this.patientRepository.getPatientById(id);
-            if (!existPatient){
-                throw new RecordNotFoundError();
-            }
-            const updatePatient = {...existPatient, ...update};
-            this.patientRepository.updatePatientById(id, updatePatient);
-            return updatePatient;
-        }catch(error){
-            if(error instanceof RecordNotFoundError){
-                throw error;
-            }else if(error instanceof MustBeANumber){
-                throw error;
-            }else{
-                throw new PatientError("Failed to update patient", "patientService", error)
-            }
-        }
-    } */
 
-    /* public async deletePatientById(idReq: string): Promise<Patient>{
+            const id_paciente = patient[0].id_paciente;
+
+            const appointmentsPatient:any = await this.appointmentRepository.getAppoinmentsByPatient(id_paciente);
+            if (!appointmentsPatient.length){
+                throw new RecordNotFoundError("Appointments");
+            }
+
+            return appointmentsPatient
+
+        }catch(error){
+            if (error instanceof RecordNotFoundError){
+                throw error;
+            }else{
+                throw new GetError('appointment', 'AppointmentService', error);
+            }
+        }
+    }
+
+    public async deleteAppointmentById(id: number): Promise<Appointment>{
         try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
+            const existAppointment = await this.appointmentRepository.getAppointmentById(id);
+            if (!existAppointment){
+                throw new RecordNotFoundError('Appointment');
             }
-            const existPatient = await this.patientRepository.getPatientById(id);
-            if (!existPatient){
-                throw new RecordNotFoundError();
-            }
-            this.patientRepository.deletePatientById(id);
-            return existPatient
+            this.appointmentRepository.deleteAppointmentById(id);
+            return existAppointment
         }catch(error){
             if(error instanceof RecordNotFoundError){
                 throw error;
-            }else if(error instanceof MustBeANumber){
-                throw error;
             }else{
-                throw new PatientError("Failed to delete patient", "PatientService", error) 
+                throw new DeleteError('appointment', 'AppointmentService', error) 
             }
         }
-    } */
+    }
 }

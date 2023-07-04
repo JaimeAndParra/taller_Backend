@@ -1,117 +1,131 @@
-/* El servicio es quien se encarga de ejecutar el modelo */
-/* La interface se encarga de indicarle al controlador el uso del servicio */
-
-import { RecordNotFoundError, DoctorError, MustBeANumber } from '../../../config/customError';
+import { CreateError, CustomError, DeleteError, GetAllError, GetError, RecordAlreadyExistsError, RecordNotFoundError, UpdateError } from '../../../utils/customError';
+import { AppointmentRepository } from '../citas/repository';
 import {Doctor, DoctorReq} from './model'
 import { DoctorRepository } from './repository';
 
 export interface DoctorService {
     getAllDoctors(): Promise<Doctor[]>,
     createDoctor(doctorReq: DoctorReq): Promise<Doctor>,
-    getDoctorById(idReq: string): Promise<Doctor>,
-    updateDoctorById(idReq: string, update: Partial<DoctorReq>): Promise<Doctor>
-    deleteDoctorById(idReq: string): Promise<Doctor>,
+    getDoctorById(idReq: number): Promise<Doctor>,
+    getDoctorByIdentificacion(identificacion: string): Promise<Doctor[]>,
+    updateDoctorById(idReq: number, update: Partial<DoctorReq>): Promise<Doctor>
+    deleteDoctorById(idReq: number): Promise<Doctor>,
 }
 
 export class DoctorServiceImpl implements DoctorService {
 
     private doctorRepository: DoctorRepository;
+    private appointmentRepository: AppointmentRepository;
 
     constructor(doctorRepository: DoctorRepository){
         this.doctorRepository = doctorRepository;
+        this.appointmentRepository = new AppointmentRepository;
     }
 
     public getAllDoctors(): Promise<Doctor[]> {
         try{
             return this.doctorRepository.getAllDoctors();
         }catch(error){
-            throw new DoctorError("Error getting all doctors", "doctorService", error)
+            throw new GetAllError('doctor', 'DoctorService', error);
         }
     }
 
-    public createDoctor(doctorReq: DoctorReq): Promise<Doctor> {
-        
-        try{   
-            const doctor: Doctor = {
-                nombre: doctorReq.nombre,
-                apellido: doctorReq.apellido,
-                especialidad: doctorReq.especialidad,
-                consultorio: doctorReq.consultorio,
-                correo: doctorReq.correo,
-                created_at: new Date(),
-                updated_at: new Date()
+    public async createDoctor(doctorReq: DoctorReq): Promise<Doctor> {
+        try{
+            const identificacion = doctorReq.identificacion;
+            const doctorExist:any = await this.doctorRepository.getDoctorByIdentificacion(identificacion);
+            if(doctorExist.length){       
+                const nombreDoctor = doctorExist.map(function(d:any){ return `${d.nombre} ${d.apellido}`});
+                const nombreDoctorReq = `${doctorReq.nombre} ${doctorReq.apellido}`
+                if (!nombreDoctorReq.includes(nombreDoctor)){
+                    throw new RecordAlreadyExistsError("Doctor");
+                }
+                const especialidades = doctorExist.map(function(d:any){ return d.especialidad});
+                if (especialidades.includes(doctorReq.especialidad)){
+                    throw new RecordAlreadyExistsError("Doctor");
+                }
             }
-            return this.doctorRepository.createDoctor(doctor);
+            const doctorCreate: Doctor = {...doctorReq};
+            doctorCreate.created_at = doctorCreate.updated_at = new Date();
+            return this.doctorRepository.createDoctor(doctorCreate);
         }catch(error){
-            throw new DoctorError("Error creating a new doctor", "doctorService", error)
+            if(error instanceof RecordAlreadyExistsError){
+                throw error;
+            }else{ 
+                throw new CreateError('doctor', 'DoctorService', error);
+            }
         }   
     }
 
-    public async getDoctorById(idReq: string): Promise <Doctor>{
+    public async getDoctorById(id: number): Promise <Doctor>{
         try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
-            }
             const existDoctor = await this.doctorRepository.getDoctorById(id);
             if (!existDoctor){
-                throw new RecordNotFoundError();
+                throw new RecordNotFoundError('Doctor');
             }
-            return existDoctor
+            return existDoctor;
         }catch(error){
             if(error instanceof RecordNotFoundError){
                 throw error;
-            }else if(error instanceof MustBeANumber){
-                throw error;
             }else{
-                throw new DoctorError("Error getting doctor", "doctorService", error)
+                throw new GetError('doctor', 'DoctorService', error);
             }
         }
     }
 
-    public async updateDoctorById(idReq: string, update: Partial<DoctorReq>): Promise<Doctor>{
+    public async getDoctorByIdentificacion(identificacion: string): Promise <Doctor[]>{
         try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
+            const doctor:any = await this.doctorRepository.getDoctorByIdentificacion(identificacion);
+            if (!doctor.length){
+                throw new RecordNotFoundError('Doctor');
             }
+            return doctor;
+        }catch(error){
+            if(error instanceof RecordNotFoundError){
+                throw error;
+            }else{
+                throw new GetError('doctor', 'DoctorService', error);
+            }
+        }
+    }
+
+    public async updateDoctorById(id: number, update: Partial<DoctorReq>): Promise<Doctor>{
+        try{
             const existDoctor = await this.doctorRepository.getDoctorById(id);
             if (!existDoctor){
-                throw new RecordNotFoundError();
+                throw new RecordNotFoundError('Doctor');
             }
             const updateDoctor = {...existDoctor, ...update};
-            this.doctorRepository.updateDoctorById(id, updateDoctor);
-            return updateDoctor;
+            updateDoctor.updated_at = new Date();
+            return await this.doctorRepository.updateDoctorById(id, updateDoctor);
         }catch(error){
             if(error instanceof RecordNotFoundError){
                 throw error;
-            }else if(error instanceof MustBeANumber){
-                throw error;
             }else{
-                throw new DoctorError("Failed to update doctor", "doctorService", error)
+                throw new UpdateError('doctor', 'DoctorService', error)
             }
         }
     }
 
-    public async deleteDoctorById(idReq: string): Promise<Doctor>{
+    public async deleteDoctorById(id: number): Promise<Doctor>{
         try{
-            const id = parseInt(idReq);
-            if(isNaN(id)){
-                throw new MustBeANumber();
-            }
             const existDoctor = await this.doctorRepository.getDoctorById(id);
             if (!existDoctor){
-                throw new RecordNotFoundError();
+                throw new RecordNotFoundError('Doctor');
+            }
+            const appointment:any = await this.appointmentRepository.getAppointmentByDoctorId(id);
+            if(appointment){
+                throw new CustomError(`Doctor ${existDoctor.apellido} has registered appointments. Are you sure you want to delete it?`)
             }
             this.doctorRepository.deleteDoctorById(id);
             return existDoctor
         }catch(error){
             if(error instanceof RecordNotFoundError){
                 throw error;
-            }else if(error instanceof MustBeANumber){
+            }else if(error instanceof CustomError){
                 throw error;
             }else{
-                throw new DoctorError("Failed to delete doctor", "doctorService", error)
+                throw new DeleteError('doctor', 'DoctorService', error)
             }
         }
     }

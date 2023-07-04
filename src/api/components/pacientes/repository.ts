@@ -1,25 +1,24 @@
-import { PatientError } from "../../../config/customError";
 import { db } from "../../../config/database"
+import { CreateError, DeleteError, GetAllError, GetError, UpdateError } from "../../../utils/customError";
 import { Patient, PatientReq } from "./model"
 
 export class PatientRepository {
-
-    public async createPatient (patient: PatientReq): Promise<Patient>{
-        try {
-            const createdPatient:any = await db('pacientes').insert(patient).returning("*");
-            return createdPatient
-        }catch(error){
-            throw new PatientError("Error creating a new patient", "patientRepository", error)
-        }
-
-    }
 
     public async getAllPatients (): Promise<Patient[]>{
         try {
             const allPatients:any = await db.select('*').from('pacientes');
             return allPatients
         }catch(error){
-            throw new PatientError("Error getting all patients", "patientRepository", error)
+            throw new GetAllError('patient', 'PatientRepository', error);
+        }
+    }
+
+    public async createPatient (patient: PatientReq): Promise<Patient>{
+        try {
+            const createdPatient:any = await db('pacientes').insert(patient).returning("*");
+            return createdPatient
+        }catch(error){
+            throw new CreateError('patient', 'PatientRepository', error);            
         }
 
     }
@@ -29,24 +28,25 @@ export class PatientRepository {
             const patient: Patient = (await db('pacientes')).find((patient)=>patient.id_paciente == id);
             return patient
         }catch(error){
-            throw new PatientError("Error getting patient", "patientRepository", error);
+            throw new GetError('patient', 'PatientRepository', error);
         }  
     }
 
-    public async getPatientByCedula (identificacion: string): Promise<Patient> {
+    public async getPatientByIdentificacion (identificacion: string): Promise<Patient> {
         try {
-            const patient: Patient = (await db('pacientes')).find((patient)=>patient.identificacion == identificacion);
+            const patient:any = await db.select('*').from('pacientes').where({identificacion: identificacion});
             return patient
         }catch(error){
-            throw new PatientError("Error getting patient", "patientRepository", error);
+            throw new GetError("patient", "PatientRepository", error);
         }
     }
 
-    public async updatePatientById (id: number, update: Partial<Patient>): Promise<void>{
+    public async updatePatientById (id: number, update: Partial<Patient>): Promise<Patient>{
         try{
-            await db('pacientes').where({id_paciente: id}).update(update)
+            const updatedPatient:any = await db('pacientes').where({id_paciente: id}).update(update).returning("*");
+            return updatedPatient
         }catch(error){
-            throw new PatientError("Failed to update patient", "PatientRepository", error);
+            throw new UpdateError('patient', 'patientRepository', error);
         }
     }
 
@@ -54,7 +54,7 @@ export class PatientRepository {
         try{
             await db('pacientes').where({id_paciente: id}).del()
         }catch(error){
-            throw new PatientError("Failed to delete patient", "PatientRepository", error);
+            throw new DeleteError('patient', 'PatientRepository', error);
         }
     }
 }

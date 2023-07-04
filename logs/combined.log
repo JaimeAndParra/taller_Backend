@@ -297,3 +297,171 @@ info: Access to doctores success
 2023-07-03T03:22:22.823Z-info: 
 2023-07-03T03:25:58.855Z-info: 
 2023-07-03T03:27:01.003Z-info: 
+2023-07-03T15:49:14.018Z-info: 
+2023-07-03T15:49:47.449Z-info: 
+2023-07-03T15:50:40.502Z-info: New doctor created succesfully: [{"id_doctor":"25","nombre":"John","apellido":"Doe","especialidad":"Medicina general","consultorio":"500","correo":null,"created_at":"2023-07-03T15:50:40.337Z","updated_at":"2023-07-03T15:50:40.337Z"}]
+2023-07-03T15:53:45.553Z-info: 
+2023-07-03T15:54:24.983Z-info: 
+2023-07-03T15:56:04.606Z-info: New doctor created succesfully: [{"id_doctor":"26","nombre":"John","apellido":"Doe","especialidad":"Cardiología","consultorio":"501","correo":null,"created_at":"2023-07-03T15:56:04.498Z","updated_at":"2023-07-03T15:56:04.498Z"}]
+2023-07-03T15:57:27.598Z-info: 
+2023-07-03T15:57:55.383Z-info: New doctor created succesfully: [{"id_doctor":"27","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"502","correo":null,"created_at":"2023-07-03T15:57:55.297Z","updated_at":"2023-07-03T15:57:55.297Z"}]
+2023-07-03T15:58:28.365Z-info: New doctor created succesfully: [{"id_doctor":"28","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"502","correo":"john.doe@gmail.com","created_at":"2023-07-03T15:58:28.285Z","updated_at":"2023-07-03T15:58:28.285Z"}]
+2023-07-03T16:06:23.368Z-info: 
+2023-07-03T16:06:28.578Z-error: Error creating a new doctor in DoctorRepository: [error: database "gestion_citas1" does not exist]
+2023-07-03T16:12:56.753Z-info: 
+2023-07-03T16:14:05.033Z-info: 
+2023-07-03T16:14:08.711Z-error: Error getting all doctors in DoctorRepository: [error: database "gestion_citas1" does not exist]
+2023-07-03T16:22:27.125Z-info: 
+2023-07-03T16:29:16.820Z-info: 
+2023-07-03T16:30:36.920Z-info: Doctor updated succesfully: {"id_doctor":"6","nombre":"John","apellido":"Rodriguez","especialidad":"Medicina General","consultorio":"100","correo":"carlos.rodriguez@gmail.com","created_at":"2023-06-28T19:46:40.908Z","updated_at":null}
+2023-07-03T16:30:42.616Z-info: Doctor updated succesfully: {"id_doctor":"5","nombre":"John","apellido":"Rodriguez","especialidad":"Medicina General","consultorio":"54m","correo":"carlos.rodriguez@gmail.com","created_at":"2023-06-28T15:11:19.841Z","updated_at":null}
+2023-07-03T16:31:58.288Z-info: Doctor updated succesfully: {"id_doctor":"6","nombre":"John","apellido":"Rodriguez","especialidad":"Psicología","consultorio":600,"correo":"carlos.rodriguez@gmail.com","created_at":"2023-06-28T19:46:40.908Z","updated_at":null}
+2023-07-03T16:40:07.176Z-info: 
+2023-07-03T16:40:56.460Z-info: Doctor updated succesfully: [{"id_doctor":"6","nombre":"John","apellido":"Rodriguez","especialidad":"Psicología","consultorio":"600","correo":"carlos.rodriguez@gmail.com","created_at":"2023-06-28T19:46:40.908Z","updated_at":"2023-07-03T16:40:56.396Z"}]
+2023-07-03T16:41:17.965Z-info: Doctor updated succesfully: [{"id_doctor":"6","nombre":"John","apellido":"Doe","especialidad":"Psicología","consultorio":"601","correo":"carlos.rodriguez@gmail.com","created_at":"2023-06-28T19:46:40.908Z","updated_at":"2023-07-03T16:41:17.911Z"}]
+2023-07-03T17:11:54.125Z-info: 
+2023-07-03T17:18:53.443Z-info: 
+2023-07-03T17:19:29.471Z-info: New doctor created succesfully: [{"id_doctor":"29","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"502","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:19:29.374Z","updated_at":"2023-07-03T17:19:29.374Z","identificacion":"1234"}]
+2023-07-03T17:21:10.281Z-info: New doctor created succesfully: [{"id_doctor":"30","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"502","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:21:10.229Z","updated_at":"2023-07-03T17:21:10.229Z","identificacion":"1234"}]
+2023-07-03T17:23:36.780Z-info: New doctor created succesfully: [{"id_doctor":"31","nombre":"John","apellido":"Doe","especialidad":"Medicina general","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:23:36.723Z","updated_at":"2023-07-03T17:23:36.723Z","identificacion":"1234"}]
+2023-07-03T17:36:24.945Z-info: 
+2023-07-03T17:37:03.214Z-info: New doctor created succesfully: [{"id_doctor":"32","nombre":"John","apellido":"Doe","especialidad":"Medicina general","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:37:03.156Z","updated_at":"2023-07-03T17:37:03.156Z","identificacion":"1234"}]
+2023-07-03T17:38:13.978Z-info: 
+2023-07-03T17:38:16.698Z-info: New doctor created succesfully: [{"id_doctor":"33","nombre":"John","apellido":"Doe","especialidad":"Medicina general","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:38:16.642Z","updated_at":"2023-07-03T17:38:16.642Z","identificacion":"1234"}]
+2023-07-03T19:00:55.785Z-info: 
+2023-07-03T19:01:00.523Z-info: New doctor created succesfully: [{"id_doctor":"34","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:01:00.470Z","updated_at":"2023-07-03T19:01:00.470Z","identificacion":"1234"}]
+2023-07-03T19:04:29.290Z-info: 
+2023-07-03T19:04:31.748Z-info: New doctor created succesfully: [{"id_doctor":"35","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:04:31.688Z","updated_at":"2023-07-03T19:04:31.688Z","identificacion":"1234"}]
+2023-07-03T19:07:23.633Z-info: 
+2023-07-03T19:07:33.000Z-info: 
+2023-07-03T19:07:33.942Z-info: New doctor created succesfully: [{"id_doctor":"36","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:07:33.890Z","updated_at":"2023-07-03T19:07:33.890Z","identificacion":"1234"}]
+2023-07-03T19:09:33.345Z-info: 
+2023-07-03T19:09:35.378Z-info: New doctor created succesfully: [{"id_doctor":"37","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:09:35.320Z","updated_at":"2023-07-03T19:09:35.320Z","identificacion":"1234"}]
+2023-07-03T19:17:24.979Z-info: 
+2023-07-03T19:17:28.504Z-info: New doctor created succesfully: [{"id_doctor":"38","nombre":"John","apellido":"Doe","especialidad":"Dermatología","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:17:28.434Z","updated_at":"2023-07-03T19:17:28.434Z","identificacion":"1234"}]
+2023-07-03T19:18:29.499Z-info: 
+2023-07-03T19:18:44.056Z-info: New doctor created succesfully: [{"id_doctor":"39","nombre":"John","apellido":"Doe","especialidad":"Radiología","consultorio":"504","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:18:43.993Z","updated_at":"2023-07-03T19:18:43.993Z","identificacion":"1234"}]
+2023-07-03T19:19:50.950Z-info: 
+2023-07-03T19:20:26.166Z-info: New doctor created succesfully: [{"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}]
+2023-07-03T19:27:51.586Z-info: 
+2023-07-03T19:32:30.514Z-info: 
+2023-07-03T19:33:07.676Z-info: 
+2023-07-03T19:33:25.668Z-info: 
+2023-07-03T19:40:33.235Z-info: 
+2023-07-03T19:42:36.313Z-info: 
+2023-07-03T19:43:36.206Z-info: 
+2023-07-03T19:44:05.724Z-info: 
+2023-07-03T19:44:33.317Z-info: New doctor created succesfully: [{"id_doctor":"41","nombre":"Maria","apellido":"Williams","especialidad":"Odontología","consultorio":"601","correo":"maria.williams@gmail.com","created_at":"2023-07-03T19:44:33.254Z","updated_at":"2023-07-03T19:44:33.254Z","identificacion":"5678"}]
+2023-07-03T19:44:45.992Z-info: New doctor created succesfully: [{"id_doctor":"42","nombre":"Maria","apellido":"Williams","especialidad":"Odontología","consultorio":"601","correo":"maria.williams@gmail.com","created_at":"2023-07-03T19:44:45.947Z","updated_at":"2023-07-03T19:44:45.947Z","identificacion":"1234"}]
+2023-07-03T19:46:00.013Z-info: 
+2023-07-03T19:46:56.771Z-info: New doctor created succesfully: [{"id_doctor":"43","nombre":"Maria","apellido":"Williams","especialidad":"Dermatología","consultorio":"601","correo":"maria.williams@gmail.com","created_at":"2023-07-03T19:46:56.711Z","updated_at":"2023-07-03T19:46:56.711Z","identificacion":"5678"}]
+2023-07-03T19:47:23.876Z-info: New doctor created succesfully: [{"id_doctor":"44","nombre":"Maria","apellido":"Doe","especialidad":"Dermatología","consultorio":"601","correo":"maria.williams@gmail.com","created_at":"2023-07-03T19:47:23.812Z","updated_at":"2023-07-03T19:47:23.812Z","identificacion":"2468"}]
+2023-07-03T19:53:19.452Z-info: 
+2023-07-03T20:04:01.342Z-info: 
+2023-07-03T20:05:27.073Z-info: New patient created succesfully: [{"id_paciente":"7","nombre":"Angela","apellido":"Nicols","identificacion":"456","telefono":null,"created_at":"2023-07-03T20:05:27.004Z","updated_at":"2023-07-03T20:05:27.004Z"}]
+2023-07-03T20:05:40.043Z-info: New patient created succesfully: [{"id_paciente":"8","nombre":"Angela","apellido":"Nicols","identificacion":"4568","telefono":null,"created_at":"2023-07-03T20:05:39.974Z","updated_at":"2023-07-03T20:05:39.974Z"}]
+2023-07-03T20:06:25.665Z-info: New patient created succesfully: [{"id_paciente":"9","nombre":"Louis","apellido":"Smith","identificacion":"987","telefono":null,"created_at":"2023-07-03T20:06:25.613Z","updated_at":"2023-07-03T20:06:25.613Z"}]
+2023-07-03T20:12:50.365Z-info: 
+2023-07-03T20:13:44.632Z-info: 
+2023-07-03T20:14:13.870Z-info: 
+2023-07-03T20:18:42.259Z-info: 
+2023-07-03T20:22:28.285Z-info: 
+2023-07-03T20:23:34.349Z-info: 
+2023-07-03T20:25:03.945Z-info: 
+2023-07-03T20:26:25.919Z-info: 
+2023-07-03T20:27:07.497Z-info: 
+2023-07-03T20:28:14.369Z-info: 
+2023-07-03T20:29:49.323Z-info: 
+2023-07-03T20:29:53.613Z-info: New patient created succesfully: [{"id_paciente":"10","nombre":"Oliver","apellido":"Brown","identificacion":"753","telefono":null,"created_at":"2023-07-03T20:29:53.558Z","updated_at":"2023-07-03T20:29:53.558Z"}]
+2023-07-03T20:33:17.335Z-info: Doctor updated succesfully: [{"id_doctor":"39","nombre":"Oliver","apellido":"Jones","especialidad":"Radiología","consultorio":"504","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:18:43.993Z","updated_at":"2023-07-03T20:33:17.284Z","identificacion":"1234"}]
+2023-07-03T20:39:06.517Z-info: 
+2023-07-03T20:39:37.775Z-info: Patient updated succesfully: 1
+2023-07-03T20:40:35.376Z-info: 
+2023-07-03T20:40:56.259Z-info: Patient updated succesfully: [{"id_paciente":"9","nombre":"Louis","apellido":"Smith","identificacion":"987","telefono":"8-888-888","created_at":"2023-07-03T20:06:25.613Z","updated_at":"2023-07-03T20:40:56.200Z"}]
+2023-07-03T20:45:24.023Z-info: 
+2023-07-03T20:46:13.165Z-info: Patient deleted succesfully: {"id_paciente":"1","nombre":"Armando","apellido":"Casas","identificacion":"123","telefono":"6666666","created_at":"2023-07-02T16:45:09.079Z","updated_at":"2023-07-02T16:45:09.079Z"}
+2023-07-03T20:46:19.070Z-info: Doctor deleted succesfully: {"id_doctor":"1","nombre":"test","apellido":"test","especialidad":"teset","consultorio":"test","correo":null,"created_at":null,"updated_at":null,"identificacion":"159"}
+2023-07-03T20:47:51.026Z-info: Patient deleted succesfully: {"id_paciente":"1","nombre":"test","apellido":"tset","identificacion":"stest","telefono":null,"created_at":null,"updated_at":null}
+2023-07-03T21:00:02.580Z-info: 
+2023-07-03T21:02:00.630Z-error: Error creating appointment in AppointmentService: [Error: Record has not been found.]
+2023-07-03T21:02:40.930Z-info: 
+2023-07-03T21:02:44.600Z-error: Error creating appointment in AppointmentService: [Error: Record has not been found.]
+2023-07-03T21:02:45.735Z-error: Error creating appointment in AppointmentService: [Error: Record has not been found.]
+2023-07-03T21:04:05.263Z-info: 
+2023-07-03T21:04:10.397Z-error: Error creating appointment in AppointmentService: [Error: Record has not been found.]
+2023-07-03T21:08:36.516Z-info: 
+2023-07-03T21:09:38.562Z-info: 
+2023-07-03T21:10:04.222Z-info: 
+2023-07-03T21:10:44.423Z-info: 
+2023-07-03T21:12:20.710Z-info: 
+2023-07-03T21:13:34.347Z-info: 
+2023-07-03T21:13:55.426Z-info: 
+2023-07-03T21:15:28.242Z-info: 
+2023-07-03T21:17:30.821Z-info: 
+2023-07-03T21:21:49.882Z-info: 
+2023-07-03T21:26:44.155Z-info: 
+2023-07-03T21:26:48.833Z-error: Error creating appointment in AppointmentService: [TypeError: doctor.map is not a function]
+2023-07-03T21:28:14.324Z-info: 
+2023-07-03T21:28:27.205Z-info: New appointment created succesfully: {"identificacionPaciente":"753","doctor":"Oliver Jones","especialidad":"Radiología","horario":"03/07/2023 8:00am","consultorio":"504"}
+2023-07-03T21:35:41.427Z-info: 
+2023-07-03T21:38:17.746Z-info: 
+2023-07-03T21:38:40.196Z-info: New appointment created succesfully: {"identificacionPaciente":"753","doctor":"Oliver Jones","especialidad":"Radiología","horario":"03/07/2023 8:00am","consultorio":"504"}
+2023-07-03T21:39:35.814Z-info: 
+2023-07-03T21:39:43.722Z-info: New appointment created succesfully: {"identificacionPaciente":"753","doctor":"Oliver Jones","especialidad":"Radiología","horario":"03/07/2023 8:00am","consultorio":"504"}
+2023-07-03T21:40:27.906Z-info: 
+2023-07-03T21:40:28.686Z-info: New appointment created succesfully: {"identificacionPaciente":"753","doctor":"Oliver Jones","especialidad":"Radiología","horario":"03/07/2023 8:00am","consultorio":"504"}
+2023-07-03T21:46:31.539Z-info: New appointment created succesfully: {"identificacionPaciente":"456","doctor":"Maria Williams","especialidad":"Odontología","horario":"03/07/2023 8:00am","consultorio":"601"}
+2023-07-03T21:46:42.072Z-info: 
+2023-07-03T21:53:31.816Z-info: 
+2023-07-03T23:28:04.980Z-info: 
+2023-07-03T23:28:40.915Z-error: Error getting doctor in DoctorRepository: [Error: Undefined binding(s) detected when compiling SELECT. Undefined column(s): [id_paciente] query: select * from "citas" where "id_paciente" = ?]
+2023-07-03T23:28:40.917Z-error: Error getting appointment in AppointmentService: [Error: Error getting doctor]
+2023-07-03T23:28:44.496Z-error: Error getting doctor in DoctorRepository: [Error: Undefined binding(s) detected when compiling SELECT. Undefined column(s): [id_paciente] query: select * from "citas" where "id_paciente" = ?]
+2023-07-03T23:28:44.498Z-error: Error getting appointment in AppointmentService: [Error: Error getting doctor]
+2023-07-03T23:29:35.954Z-error: Error getting doctor in DoctorRepository: [Error: Undefined binding(s) detected when compiling SELECT. Undefined column(s): [id_paciente] query: select * from "citas" where "id_paciente" = ?]
+2023-07-03T23:29:35.955Z-error: Error getting appointment in AppointmentService: [Error: Error getting doctor]
+2023-07-03T23:30:41.973Z-info: 
+2023-07-03T23:33:21.260Z-info: New appointment created succesfully: {"identificacionPaciente":"456","doctor":"Oliver Jones","especialidad":"Radiología","horario":"03/07/2023 9:00am","consultorio":"504"}
+2023-07-03T23:37:06.236Z-info: 
+2023-07-03T23:38:09.833Z-info: 
+2023-07-03T23:38:55.315Z-info: 
+2023-07-03T23:39:47.157Z-info: 
+2023-07-03T23:41:13.625Z-info: 
+2023-07-03T23:42:07.935Z-info: 
+2023-07-03T23:42:49.045Z-info: 
+2023-07-03T23:47:14.862Z-info: 
+2023-07-03T23:47:36.223Z-info: 
+2023-07-03T23:48:58.277Z-info: 
+2023-07-03T23:53:50.866Z-info: 
+2023-07-03T23:53:56.914Z-error: Error getting appointment in AppointmentRepository: [error: select * from "citas" where "id_doctor" = $1 - invalid input syntax for type bigint: "{"40","39","30","31"}"]
+2023-07-03T23:53:56.916Z-error: Error getting appointment in AppointmentService: [Error: Error getting appointment]
+2023-07-03T23:56:39.605Z-info: 
+2023-07-03T23:56:43.505Z-error: Error getting appointment in AppointmentService: [TypeError: appointmentsDoctor.append is not a function]
+2023-07-03T23:56:44.500Z-error: Error getting appointment in AppointmentService: [TypeError: appointmentsDoctor.append is not a function]
+2023-07-03T23:57:06.739Z-info: 
+2023-07-03T23:59:48.298Z-info: 
+2023-07-04T00:00:11.668Z-info: 
+2023-07-04T00:00:57.173Z-info: 
+2023-07-04T00:01:56.844Z-info: 
+2023-07-04T00:03:34.193Z-info: 
+2023-07-04T00:04:24.455Z-info: 
+2023-07-04T00:05:39.489Z-info: 
+2023-07-04T00:05:57.779Z-info: 
+2023-07-04T00:18:38.807Z-info: 
+2023-07-04T00:19:37.128Z-info: Appointment deleted succesfully: {"id_cita":"5","horario":"test","id_doctor":"39","id_paciente":"10","created_at":null,"updated_at":null}
+2023-07-04T00:22:13.198Z-info: New appointment created succesfully: {"identificacionPaciente":"987","doctor":"Maria Williams","especialidad":"Dermatología","horario":"Miercoles 05/07/2023 10:00am","consultorio":"601"}
+2023-07-04T00:42:03.677Z-info: 
+2023-07-04T00:42:42.603Z-info: 
+2023-07-04T00:43:17.497Z-info: 
+2023-07-04T00:43:48.834Z-info: Doctor deleted succesfully: {"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}
+2023-07-04T00:44:05.684Z-info: 
+2023-07-04T00:44:09.870Z-info: Doctor deleted succesfully: {"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}
+2023-07-04T00:44:56.160Z-info: Doctor deleted succesfully: {"id_doctor":"39","nombre":"Oliver","apellido":"Jones","especialidad":"Radiología","consultorio":"504","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:18:43.993Z","updated_at":"2023-07-03T20:33:17.284Z","identificacion":"1234"}
+2023-07-04T00:45:39.040Z-info: 
+2023-07-04T00:45:40.507Z-info: Doctor deleted succesfully: {"id_doctor":"39","nombre":"Oliver","apellido":"Jones","especialidad":"Radiología","consultorio":"504","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:18:43.993Z","updated_at":"2023-07-03T20:33:17.284Z","identificacion":"1234"}
+2023-07-04T00:45:48.961Z-info: Doctor deleted succesfully: {"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}
+2023-07-04T00:47:59.056Z-info: 
+2023-07-04T00:48:03.914Z-info: Doctor deleted succesfully: {"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}
+2023-07-04T00:48:04.860Z-info: Doctor deleted succesfully: {"id_doctor":"40","nombre":"John","apellido":"Doe","especialidad":"Medicina interna","consultorio":"505","correo":"john.doe@gmail.com","created_at":"2023-07-03T19:20:26.102Z","updated_at":"2023-07-03T19:20:26.102Z","identificacion":"1234"}
+2023-07-04T00:48:42.461Z-info: 
+2023-07-04T00:48:52.898Z-info: Doctor deleted succesfully: {"id_doctor":"31","nombre":"John","apellido":"Doe","especialidad":"Medicina general","consultorio":"503","correo":"john.doe@gmail.com","created_at":"2023-07-03T17:23:36.723Z","updated_at":"2023-07-03T17:23:36.723Z","identificacion":"1234"}

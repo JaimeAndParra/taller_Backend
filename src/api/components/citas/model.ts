@@ -3,7 +3,6 @@ export interface Appointment {
     id_doctor: number,
     id_paciente: number,
     horario: string,
-    especialidad: string,
     created_at?: Date, 
     updated_at?: Date, 
 }

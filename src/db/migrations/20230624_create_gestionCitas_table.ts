@@ -12,6 +12,7 @@ export async function up(knex:Knex): Promise<void> {
                 apellido VARCHAR,
                 especialidad VARCHAR,
                 consultorio VARCHAR,
+                identificacion VARCHAR,
                 correo VARCHAR,
                 created_at TIMESTAMPTZ,
                 updated_at TIMESTAMPTZ,
