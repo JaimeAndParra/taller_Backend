@@ -1,13 +1,13 @@
 export interface Doctor {
-    id_doctor?: number,
+    id_doctor: number,
     nombre: string,
     apellido: string,
     especialidad: string,
     consultorio: string,
     correo: string,
     identificacion: string,
-    created_at?: Date, 
-    updated_at?: Date,
+    created_at: Date, 
+    updated_at: Date,
 }
 
 export interface DoctorReq {
@@ -17,6 +17,17 @@ export interface DoctorReq {
     consultorio: string,
     correo: string,
     identificacion: string,
+}
+
+export interface DoctorDBInsert {
+    nombre: string,
+    apellido: string,
+    especialidad: string,
+    consultorio: string,
+    correo: string,
+    identificacion: string,
+    created_at?: Date, 
+    updated_at?: Date,
 }
 
 

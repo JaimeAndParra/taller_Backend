@@ -24,8 +24,8 @@ export class DoctorControllerImpl implements DoctorController {
         await this.doctorService.getAllDoctors()
         .then((allDoctors)=>{
             res.status(200).json(allDoctors);
-        },
-        (error) => {
+        })
+        .catch((error) => {
             res.status(400).json({message: `${error.message}`}); 
         })
     }
@@ -40,8 +40,8 @@ export class DoctorControllerImpl implements DoctorController {
         .then((doctor)=>{
             logger.info(`New doctor created succesfully: ${JSON.stringify(doctor)}`);
             res.status(201).json(doctor);
-        },
-        (error) => {
+        })
+        .catch((error) => {
             res.status(400).json({message: `${error.message}`});
         })
     }
@@ -55,8 +55,8 @@ export class DoctorControllerImpl implements DoctorController {
         await this.doctorService.getDoctorById(id)
         .then((doctor)=>{
             res.status(200).json(doctor)
-        },
-        (error)=>{
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }
@@ -70,8 +70,8 @@ export class DoctorControllerImpl implements DoctorController {
         await this.doctorService.getDoctorByIdentificacion(value.identificacion)
         .then((doctor)=>{
             res.status(200).json(doctor)
-        },
-        (error)=>{
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }
@@ -87,12 +87,16 @@ export class DoctorControllerImpl implements DoctorController {
             res.status(400).json({message: `${error.details[0].message}`});
             return;
         }
-        await this.doctorService.updateDoctorById(id, value)
-        .then((doctor)=>{
-            logger.info(`Doctor updated succesfully: ${JSON.stringify(doctor)}`)
-            res.status(200).json(doctor)
-        },
-        (error)=>{
+
+        await this.doctorService.getDoctorById(id)
+        .then(async (doctor) => {
+            return await this.doctorService.updateDoctorById(doctor, value)
+        })
+        .then((doctorUpdate)=>{
+            logger.info(`Doctor updated succesfully: ${JSON.stringify(doctorUpdate)}`)
+            res.status(200).json(doctorUpdate)
+        })
+        .catch((error)=>{
             res.status(400).json({message: error.message}) 
         })
     }
@@ -102,13 +106,16 @@ export class DoctorControllerImpl implements DoctorController {
         if(isNaN(id)){
             res.status(400).json({message: `Error: ID must be a number`});
             return
-        }
-        await this.doctorService.deleteDoctorById(id)
+        }        
+        await this.doctorService.getDoctorById(id)
+        .then(async (doctor) => {
+            return await this.doctorService.deleteDoctorById(doctor)
+        })
         .then((doctor)=>{
-            res.status(200).json({message: "Doctor deleted succesfully"})
+            res.status(200).json({message: `Doctor deleted succesfully: ${JSON.stringify(doctor)}`})
             logger.info(`Doctor deleted succesfully: ${JSON.stringify(doctor)}`)
-        },
-        (error)=>{
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }

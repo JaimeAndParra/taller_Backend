@@ -7,8 +7,7 @@ export class DoctorRepository {
 
     public async getAllDoctors (): Promise<Doctor[]>{
         try {
-            const allDoctors:any = await db.select('*').from('doctores');
-            return allDoctors;
+            return await db.select('*').from('doctores');
         }catch(error){
             throw new GetAllError('doctor', 'DoctorRepository', error);
         }
@@ -23,19 +22,17 @@ export class DoctorRepository {
         }
     }
 
-
-    public async getDoctorById (id: number): Promise<Doctor> {
+    public async getDoctorById (id_doctor: number): Promise<Doctor> {
         try {
-            const doctor: Doctor = (await db('doctores')).find((doc)=>doc.id_doctor == id);
-            return doctor
+            return await db('doctores').where({id_doctor}).first()
         }catch(error){
             throw new GetError('doctor', 'DoctorRepository', error);
         }
     }
 
-    public async updateDoctorById (id: number, update: Partial<DoctorReq>): Promise<Doctor>{
+    public async updateDoctorById (id_doctor: number, update: Partial<DoctorReq>): Promise<Doctor>{
         try{
-            const updatedDoctor:any = await db('doctores').where({id_doctor: id}).update(update).returning("*");
+            const updatedDoctor:any = await db('doctores').where({id_doctor}).update(update).returning("*");
             return updatedDoctor
         }catch(error){
             throw new UpdateError('doctor', 'DoctorRepository', error);
@@ -50,10 +47,9 @@ export class DoctorRepository {
         }
     }
 
-    public async getDoctorByIdentificacion (identificacion: string): Promise<Doctor> {
+    public async getDoctorByIdentificacion (identificacion: string): Promise<Doctor|any> {
         try {
-            const doctor:any = await db.select('*').from('doctores').where({identificacion: identificacion});
-            return doctor
+            return await db.select('*').from('doctores').where({identificacion});
         }catch(error){
             throw new GetError("doctor", "DoctorRepository", error);
         }

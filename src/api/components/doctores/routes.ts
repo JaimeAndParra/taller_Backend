@@ -9,10 +9,10 @@ const doctorController: DoctorController = new DoctorControllerImpl(doctorServic
 
 const router = Router()
 router.get('/list', doctorController.getAllDoctors.bind(doctorController));
-router.post('/create', doctorController.createDoctor.bind(doctorController));
-router.post('/search', doctorController.getDoctorByIdentificacion.bind(doctorController));
 router.get('/:id', doctorController.getDoctorById.bind(doctorController));
+router.patch('/search', doctorController.getDoctorByIdentificacion.bind(doctorController));
 router.put('/:id', doctorController.updateDoctorById.bind(doctorController));
+router.post('/create', doctorController.createDoctor.bind(doctorController));
 router.delete('/:id', doctorController.deleteDoctorById.bind(doctorController));
 
 export default router
