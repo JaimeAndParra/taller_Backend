@@ -210,6 +210,23 @@ describe('DoctorController', () => {
             expect(resMock.json).toHaveBeenCalledWith(doctor1);
             expect(resMock.status).toHaveBeenCalledWith(200);
         })
+        it('should be handler error and return 400 when param id is wrong', async () => {
+            (reqMock.params) = {id: "m"};
+            await doctorController.updateDoctorById(reqMock, resMock)
+            expect(resMock.json).toHaveBeenCalledWith({message: `Error: ID must be a number`})   
+            expect(resMock.status).toHaveBeenCalledWith(400) 
+        })
+        it('should return an 400 if an error exist', async () => {
+            const error = new Error("Internal Server error");
+            (reqMock.params) = {id: "1"};
+
+            (doctorService.getDoctorById as jest.Mock).mockRejectedValue(error);
+            await doctorController.updateDoctorById(reqMock, resMock)
+
+            expect(doctorService.getDoctorById).toHaveBeenCalledWith(1)
+            expect(resMock.json).toHaveBeenCalledWith({message: "Internal Server error"})
+            expect(resMock.status).toHaveBeenCalledWith(400)
+        })
     })
 
     describe('deleteDoctorByID', () => {

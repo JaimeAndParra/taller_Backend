@@ -85,7 +85,6 @@ export class DoctorServiceImpl implements DoctorService {
             updateDoctor.updated_at = new Date();
             return await this.doctorRepository.updateDoctorById(existDoctor.id_doctor, updateDoctor);
         }catch(error){
-            if(error instanceof RecordNotFoundError) throw error;
             if(error instanceof UpdateError) throw error;
             throw new UpdateError('doctor', 'DoctorService', error)
         }
