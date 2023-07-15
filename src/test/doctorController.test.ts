@@ -238,7 +238,8 @@ describe('DoctorController', () => {
             await doctorController.deleteDoctorById(reqMock, resMock);
             expect(doctorService.getDoctorById).toHaveBeenCalledWith(1);
             expect(doctorService.deleteDoctorById).toHaveBeenCalledWith(doctor1);
-            expect(resMock.json).toHaveBeenCalledWith({message: `Doctor deleted succesfully: ${JSON.stringify(doctor1)}`});            expect(resMock.status).toHaveBeenCalledWith(200);
+            expect(resMock.json).toHaveBeenCalledWith({message: `Doctor ${doctor1.apellido} deleted succesfully.`});
+            expect(resMock.status).toHaveBeenCalledWith(200);
         })
         it('should be handler error and return 400 when param id is wrong', async () => {
             (reqMock.params) = {id: "m"};

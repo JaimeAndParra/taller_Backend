@@ -24,8 +24,8 @@ export class PatientControllerImpl implements PatientController {
         await this.patientService.getAllPatients()
         .then((allPatients)=>{
             res.status(200).json(allPatients);
-        },
-        (error) => {
+        })
+        .catch((error)=>{
             res.status(400).json({message: `${error.message}`}) 
         })
     }
@@ -40,8 +40,8 @@ export class PatientControllerImpl implements PatientController {
         .then((patient)=>{
             logger.info(`New patient created succesfully: ${JSON.stringify(patient)}`)
             res.status(201).json(patient)
-        },
-        (error) => {
+        })
+        .catch((error) => {
             res.status(400).json({message: `${error.message}`}) 
         })
     }
@@ -55,8 +55,8 @@ export class PatientControllerImpl implements PatientController {
         await this.patientService.getPatientById(id)
         .then((patient)=>{
             res.status(200).json(patient)
-        },
-        (error)=>{
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }
@@ -70,8 +70,8 @@ export class PatientControllerImpl implements PatientController {
         await this.patientService.getPatientByIdentificacion(value.identificacion)
         .then((patient)=>{
             res.status(200).json(patient)
-        },
-        (error)=>{
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }
@@ -87,12 +87,15 @@ export class PatientControllerImpl implements PatientController {
             res.status(400).json({message: `${error.details[0].message}`});
             return;
         }
-        await this.patientService.updatePatientById(id, value)
-        .then((patient)=>{
-            logger.info(`Patient updated succesfully: ${JSON.stringify(patient)}`)
-            res.status(200).json(patient)
-        },
-        (error)=>{
+        await this.patientService.getPatientById(id)
+        .then(async (patient) => {
+            return await this.patientService.updatePatientById(patient, value)
+        })
+        .then((patientUpdate)=>{
+            logger.info(`Patient updated succesfully: ${JSON.stringify(patientUpdate)}`)
+            res.status(200).json(patientUpdate)
+        })
+        .catch((error) => {
             res.status(400).json({message: error.message}) 
         })
     }
@@ -103,12 +106,15 @@ export class PatientControllerImpl implements PatientController {
             res.status(400).json({message: `Error: ID must be a number`});
             return
         }
-        await this.patientService.deletePatientById(id)
+        await this.patientService.getPatientById(id)
+        .then(async (patient)=>{
+            return await this.patientService.deletePatientById(patient)
+        })
         .then((patient)=>{
-            res.status(200).json({message: "Patient deleted succesfully"})
+            res.status(200).json({message: `Patient ${patient.nombre} ${patient.apellido} deleted succesfully`})
             logger.info(`Patient deleted succesfully: ${JSON.stringify(patient)}`)
-        },
-        (error)=>{
+        })
+        .catch((error)=>{
             res.status(400).json({message: error.message}) 
         })
     }

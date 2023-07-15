@@ -112,7 +112,7 @@ export class DoctorControllerImpl implements DoctorController {
             return await this.doctorService.deleteDoctorById(doctor)
         })
         .then((doctor)=>{
-            res.status(200).json({message: `Doctor deleted succesfully: ${JSON.stringify(doctor)}`})
+            res.status(200).json({message: `Doctor ${doctor.apellido} deleted succesfully.`})
             logger.info(`Doctor deleted succesfully: ${JSON.stringify(doctor)}`)
         })
         .catch((error) => {

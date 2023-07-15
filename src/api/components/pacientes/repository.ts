@@ -6,8 +6,7 @@ export class PatientRepository {
 
     public async getAllPatients (): Promise<Patient[]>{
         try {
-            const allPatients:any = await db.select('*').from('pacientes');
-            return allPatients
+            return await db.select('*').from('pacientes');
         }catch(error){
             throw new GetAllError('patient', 'PatientRepository', error);
         }
@@ -15,7 +14,7 @@ export class PatientRepository {
 
     public async createPatient (patient: PatientReq): Promise<Patient>{
         try {
-            const createdPatient:any = await db('pacientes').insert(patient).returning("*");
+            const [createdPatient]:any = await db('pacientes').insert(patient).returning("*");
             return createdPatient
         }catch(error){
             throw new CreateError('patient', 'PatientRepository', error);            
@@ -23,10 +22,9 @@ export class PatientRepository {
 
     }
 
-    public async getPatientById (id: number): Promise<Patient> {
+    public async getPatientById (id_paciente: number): Promise<Patient> {
         try {
-            const patient: Patient = (await db('pacientes')).find((patient)=>patient.id_paciente == id);
-            return patient
+            return await db('pacientes').where({id_paciente}).first()
         }catch(error){
             throw new GetError('patient', 'PatientRepository', error);
         }  
@@ -34,8 +32,7 @@ export class PatientRepository {
 
     public async getPatientByIdentificacion (identificacion: string): Promise<Patient> {
         try {
-            const patient:any = await db.select('*').from('pacientes').where({identificacion: identificacion});
-            return patient
+            return await db('pacientes').where({identificacion}).first()
         }catch(error){
             throw new GetError("patient", "PatientRepository", error);
         }
@@ -43,7 +40,7 @@ export class PatientRepository {
 
     public async updatePatientById (id: number, update: Partial<Patient>): Promise<Patient>{
         try{
-            const updatedPatient:any = await db('pacientes').where({id_paciente: id}).update(update).returning("*");
+            const [updatedPatient]:any = await db('pacientes').where({id_paciente: id}).update(update).returning("*");
             return updatedPatient
         }catch(error){
             throw new UpdateError('patient', 'patientRepository', error);

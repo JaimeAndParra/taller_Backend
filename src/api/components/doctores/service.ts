@@ -36,12 +36,10 @@ export class DoctorServiceImpl implements DoctorService {
             const identificacion = doctorReq.identificacion;
             const doctorExist:any = await this.doctorRepository.getDoctorByIdentificacion(identificacion);
             if(doctorExist.length){       
-                
                 const nombreDoctorExist = doctorExist.map(function(doc:any){ return `${doc.nombre} ${doc.apellido}`});
-                const nombreDoctorReq = `${doctorReq.nombre} ${doctorReq.apellido}`
-                if (!nombreDoctorReq.includes(nombreDoctorExist)) throw new RecordAlreadyExistsError("Doctor");
-                
-                const especialidades = doctorExist.map(function(d:any){ return d.especialidad});
+                const nombreDoctorReq = `${doctorReq.nombre} ${doctorReq.apellido}`;                
+                if (!(nombreDoctorExist.includes(nombreDoctorReq))) throw new RecordAlreadyExistsError("Doctor");
+                const especialidades = doctorExist.map(function(doc:any){ return doc.especialidad});
                 if (especialidades.includes(doctorReq.especialidad)) throw new RecordAlreadyExistsError("Doctor");
             }
 
