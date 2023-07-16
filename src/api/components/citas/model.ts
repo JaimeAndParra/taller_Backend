@@ -1,10 +1,18 @@
 export interface Appointment {
-    id_cita?: number,
+    id_cita: number,
     id_doctor: number,
     id_paciente: number,
     horario: string,
-    created_at?: Date, 
-    updated_at?: Date, 
+    created_at: Date, 
+    updated_at: Date, 
+}
+
+export interface AppointmentDBInsert {
+    id_doctor: number,
+    id_paciente: number,
+    horario: string,
+    created_at: Date, 
+    updated_at: Date, 
 }
 
 export interface AppointmentReq {

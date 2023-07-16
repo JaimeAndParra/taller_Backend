@@ -1,6 +1,6 @@
 import { db } from "../../../config/database"
 import { CreateError, DeleteError, GetAllError, GetError, UpdateError } from "../../../utils/customError";
-import { Appointment } from "./model"
+import { Appointment, AppointmentDBInsert } from "./model"
 
 export class AppointmentRepository {
 
@@ -13,7 +13,7 @@ export class AppointmentRepository {
         }
     }
 
-    public async createAppointment (appointment: Appointment): Promise<Appointment>{
+    public async createAppointment (appointment: AppointmentDBInsert): Promise<Appointment>{
         try {
             const createdAppointment:any = await db('citas').insert(appointment).returning("*");
             return createdAppointment
@@ -23,10 +23,9 @@ export class AppointmentRepository {
 
     }
 
-    public async getAppointmentById (id: number): Promise<Appointment> {
+    public async getAppointmentById (id_cita: number): Promise<Appointment> {
         try {
-            const appointment: Appointment = (await db('citas')).find((cita)=>cita.id_cita == id);
-            return appointment
+            return await db('citas').where({id_cita}).first()
         }catch(error){
             throw new GetError('appointment', 'AppointmentRepository', error);
         }
@@ -41,18 +40,18 @@ export class AppointmentRepository {
         }
     }
 
-    public async getAppoinmentsByPatient (id_paciente: string): Promise<Appointment[]> {
+    public async getAppoinmentsByPatient (id_paciente: number): Promise<Appointment[]> {
         try {
-            const appointmentsPatient:any = await db.select('*').from('citas').where({id_paciente: id_paciente});
+            const appointmentsPatient:any = await db('citas').where({id_paciente})
             return appointmentsPatient
         }catch(error){
             throw new GetError("appointment", "AppointmentRepository", error);
         }
     }
 
-    public async deleteAppointmentById (id: number): Promise<void>{
+    public async deleteAppointmentById (id: number): Promise<Appointment|any>{
         try{
-            await db('citas').where({id_cita: id}).del()
+            return await db('citas').where({id_cita: id}).del().returning("*");
         }catch(error){
             throw new DeleteError('doctor', 'DoctorRepository', error);
         }
