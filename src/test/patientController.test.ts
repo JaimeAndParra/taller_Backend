@@ -36,7 +36,7 @@ describe('PatientController', () => {
             updated_at: nowDate,
             created_at: nowDate
         };
-        patient1 = {
+        patient2 = {
             id_paciente: 2,
             nombre: "Oliver",
             apellido: "Brown",
