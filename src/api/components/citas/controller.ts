@@ -25,10 +25,10 @@ export class AppointmentControllerImpl implements AppointmentController {
     private doctorService: DoctorService;
     private patientService: PatientService;
 
-    constructor (appointmentService: AppointmentService){
+    constructor (appointmentService: AppointmentService, patientService: PatientService, doctorService: DoctorService){
         this.appointmentService = appointmentService;
-        this.patientService = new PatientServiceImpl(new PatientRepository());
-        this.doctorService = new DoctorServiceImpl(new DoctorRepository());
+        this.patientService = patientService;
+        this.doctorService = doctorService;
     }
     
     public async getAllAppointments(req: Request, res: Response): Promise<void> {

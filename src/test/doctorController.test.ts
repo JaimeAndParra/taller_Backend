@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { DoctorController, DoctorControllerImpl } from "../api/components/doctores/controller";
 import { DoctorService } from "../api/components/doctores/service";
-import { Doctor, DoctorReq } from "../api/components/doctores/model";
+import { Doctor } from "../api/components/doctores/model";
 
 const reqMock = {} as Request;
 const resMock = {} as Response;
