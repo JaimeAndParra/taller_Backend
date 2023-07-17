@@ -2409,3 +2409,481 @@
 2023-07-16T22:29:35.679Z-error: Error getting appointment in appointmentService: []
 2023-07-16T22:29:35.683Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-16T22:29:35.682Z","created_at":"2023-07-16T22:29:35.682Z"}
 2023-07-16T22:29:35.685Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:05:44.351Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:05:44.373Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:05:44.391Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:05:44.408Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:05:44.421Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:05:44.848Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:05:44.842Z","created_at":"2023-07-17T00:05:44.842Z"}
+2023-07-17T00:05:44.924Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:05:44.916Z","created_at":"2023-07-17T00:05:44.916Z"}
+2023-07-17T00:05:44.941Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:05:44.940Z","created_at":"2023-07-17T00:05:44.940Z"}
+2023-07-17T00:05:44.950Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:05:44.929Z","created_at":"2023-07-17T00:05:44.929Z"}
+2023-07-17T00:05:45.035Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:05:45.033Z","created_at":"2023-07-17T00:05:45.033Z"}
+2023-07-17T00:05:45.060Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:05:45.058Z","created_at":"2023-07-17T00:05:45.058Z"}
+2023-07-17T00:05:45.604Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:05:45.619Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:05:45.620Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:05:45.629Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:05:45.647Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:05:45.656Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:05:46.129Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:05:46.124Z","created_at":"2023-07-17T00:05:46.124Z"}
+2023-07-17T00:05:46.149Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:05:46.161Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:05:46.178Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:05:46.183Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:05:46.182Z","created_at":"2023-07-17T00:05:46.182Z"}
+2023-07-17T00:05:46.187Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:07:39.822Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:07:39.846Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:07:39.859Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:07:39.869Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:07:39.879Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:07:40.176Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:07:40.171Z","created_at":"2023-07-17T00:07:40.171Z"}
+2023-07-17T00:07:40.225Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:07:40.223Z","created_at":"2023-07-17T00:07:40.223Z"}
+2023-07-17T00:07:40.241Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:07:40.240Z","created_at":"2023-07-17T00:07:40.240Z"}
+2023-07-17T00:07:40.192Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:07:40.184Z","created_at":"2023-07-17T00:07:40.184Z"}
+2023-07-17T00:07:40.249Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:07:40.248Z","created_at":"2023-07-17T00:07:40.248Z"}
+2023-07-17T00:07:40.262Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:07:40.261Z","created_at":"2023-07-17T00:07:40.261Z"}
+2023-07-17T00:07:40.220Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:07:40.210Z","created_at":"2023-07-17T00:07:40.210Z"}
+2023-07-17T00:07:40.263Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:07:40.292Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:07:40.343Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:07:40.353Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:07:40.352Z","created_at":"2023-07-17T00:07:40.352Z"}
+2023-07-17T00:07:40.358Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:07:40.694Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:07:40.710Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:07:40.711Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:07:40.719Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:07:40.726Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:07:40.730Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:09:08.340Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:09:08.359Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:09:08.372Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:09:08.405Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:09:08.411Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:09:08.690Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:09:08.680Z","created_at":"2023-07-17T00:09:08.680Z"}
+2023-07-17T00:09:08.749Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:09:08.748Z","created_at":"2023-07-17T00:09:08.748Z"}
+2023-07-17T00:09:08.761Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:09:08.760Z","created_at":"2023-07-17T00:09:08.760Z"}
+2023-07-17T00:09:08.728Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:09:08.714Z","created_at":"2023-07-17T00:09:08.714Z"}
+2023-07-17T00:09:08.769Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:09:08.785Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:09:08.815Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:09:08.828Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:09:08.827Z","created_at":"2023-07-17T00:09:08.827Z"}
+2023-07-17T00:09:08.834Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:09:08.769Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:09:08.756Z","created_at":"2023-07-17T00:09:08.756Z"}
+2023-07-17T00:09:08.832Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:09:08.831Z","created_at":"2023-07-17T00:09:08.831Z"}
+2023-07-17T00:09:08.842Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:09:08.841Z","created_at":"2023-07-17T00:09:08.841Z"}
+2023-07-17T00:09:09.150Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:09:09.167Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:09:09.169Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:09:09.176Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:09:09.186Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:09:09.191Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:10:42.464Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:10:42.459Z","created_at":"2023-07-17T00:10:42.459Z"}
+2023-07-17T00:10:42.521Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:10:42.519Z","created_at":"2023-07-17T00:10:42.519Z"}
+2023-07-17T00:10:42.532Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:10:42.531Z","created_at":"2023-07-17T00:10:42.531Z"}
+2023-07-17T00:10:42.496Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:10:42.515Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:10:42.530Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:10:42.544Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:10:42.551Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:10:42.744Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:10:42.735Z","created_at":"2023-07-17T00:10:42.735Z"}
+2023-07-17T00:10:42.792Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:10:42.791Z","created_at":"2023-07-17T00:10:42.791Z"}
+2023-07-17T00:10:42.809Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:10:42.806Z","created_at":"2023-07-17T00:10:42.806Z"}
+2023-07-17T00:10:42.920Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:10:42.915Z","created_at":"2023-07-17T00:10:42.915Z"}
+2023-07-17T00:10:42.951Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:10:42.967Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:10:42.991Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:10:42.998Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:10:42.997Z","created_at":"2023-07-17T00:10:42.997Z"}
+2023-07-17T00:10:43.002Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:10:43.410Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:10:43.421Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:10:43.423Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:10:43.429Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:10:43.435Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:10:43.438Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:11:24.792Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:11:24.814Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:11:24.829Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:11:24.843Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:11:24.850Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:11:24.872Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:11:24.865Z","created_at":"2023-07-17T00:11:24.865Z"}
+2023-07-17T00:11:24.938Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:11:24.963Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:11:24.986Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:11:24.994Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:11:24.993Z","created_at":"2023-07-17T00:11:24.993Z"}
+2023-07-17T00:11:24.998Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:11:24.969Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:24.960Z","created_at":"2023-07-17T00:11:24.960Z"}
+2023-07-17T00:11:25.038Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:25.034Z","created_at":"2023-07-17T00:11:25.034Z"}
+2023-07-17T00:11:25.054Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:25.051Z","created_at":"2023-07-17T00:11:25.051Z"}
+2023-07-17T00:11:25.253Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:25.245Z","created_at":"2023-07-17T00:11:25.245Z"}
+2023-07-17T00:11:25.291Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:25.289Z","created_at":"2023-07-17T00:11:25.289Z"}
+2023-07-17T00:11:25.302Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:25.302Z","created_at":"2023-07-17T00:11:25.302Z"}
+2023-07-17T00:11:25.665Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:11:25.680Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:11:25.680Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:11:25.688Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:11:25.698Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:11:25.702Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:11:47.626Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:11:47.637Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:11:47.649Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:11:47.668Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:11:47.672Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:11:47.670Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:47.662Z","created_at":"2023-07-17T00:11:47.662Z"}
+2023-07-17T00:11:47.731Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:47.730Z","created_at":"2023-07-17T00:11:47.730Z"}
+2023-07-17T00:11:47.741Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:11:47.740Z","created_at":"2023-07-17T00:11:47.740Z"}
+2023-07-17T00:11:47.826Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:11:47.822Z","created_at":"2023-07-17T00:11:47.822Z"}
+2023-07-17T00:11:47.846Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:11:47.858Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:11:47.873Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:11:47.877Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:11:47.876Z","created_at":"2023-07-17T00:11:47.876Z"}
+2023-07-17T00:11:47.879Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:11:47.864Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:47.859Z","created_at":"2023-07-17T00:11:47.859Z"}
+2023-07-17T00:11:47.902Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:47.897Z","created_at":"2023-07-17T00:11:47.897Z"}
+2023-07-17T00:11:47.915Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:11:47.914Z","created_at":"2023-07-17T00:11:47.914Z"}
+2023-07-17T00:11:48.036Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:11:48.041Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:11:48.066Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:11:48.074Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:11:48.074Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:11:48.078Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:11:48.081Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:11:48.083Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:12:44.938Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:12:44.950Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:12:44.959Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:12:44.968Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:12:44.972Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:12:45.267Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:12:45.263Z","created_at":"2023-07-17T00:12:45.263Z"}
+2023-07-17T00:12:45.301Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:12:45.314Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:12:45.330Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:12:45.344Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:12:45.343Z","created_at":"2023-07-17T00:12:45.343Z"}
+2023-07-17T00:12:45.347Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:12:45.420Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:12:45.417Z","created_at":"2023-07-17T00:12:45.417Z"}
+2023-07-17T00:12:45.444Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:12:45.443Z","created_at":"2023-07-17T00:12:45.443Z"}
+2023-07-17T00:12:45.451Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:12:45.450Z","created_at":"2023-07-17T00:12:45.450Z"}
+2023-07-17T00:12:45.409Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:12:45.406Z","created_at":"2023-07-17T00:12:45.406Z"}
+2023-07-17T00:12:45.437Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:12:45.436Z","created_at":"2023-07-17T00:12:45.436Z"}
+2023-07-17T00:12:45.444Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:12:45.443Z","created_at":"2023-07-17T00:12:45.443Z"}
+2023-07-17T00:12:45.619Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:12:45.630Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:12:45.631Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:12:45.637Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:12:45.642Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:12:45.645Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:12:45.734Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:12:45.743Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:12:45.751Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:13:40.707Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:13:40.739Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:13:40.809Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:13:40.899Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:13:40.946Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:13:40.975Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:13:40.997Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:13:41.008Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:13:41.150Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:13:41.143Z","created_at":"2023-07-17T00:13:41.143Z"}
+2023-07-17T00:13:41.202Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:13:41.200Z","created_at":"2023-07-17T00:13:41.200Z"}
+2023-07-17T00:13:41.211Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:13:41.210Z","created_at":"2023-07-17T00:13:41.210Z"}
+2023-07-17T00:13:41.191Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:13:41.181Z","created_at":"2023-07-17T00:13:41.181Z"}
+2023-07-17T00:13:41.236Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:13:41.234Z","created_at":"2023-07-17T00:13:41.234Z"}
+2023-07-17T00:13:41.247Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:13:41.246Z","created_at":"2023-07-17T00:13:41.246Z"}
+2023-07-17T00:13:41.256Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:13:41.246Z","created_at":"2023-07-17T00:13:41.246Z"}
+2023-07-17T00:13:41.304Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:13:41.331Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:13:41.347Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:13:41.353Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:13:41.353Z","created_at":"2023-07-17T00:13:41.353Z"}
+2023-07-17T00:13:41.356Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:13:41.596Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:13:41.630Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:13:41.633Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:13:41.643Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:13:41.651Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:13:41.657Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:16:29.399Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:16:29.436Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:16:29.448Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:16:29.461Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:16:29.477Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:16:29.497Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:29.489Z","created_at":"2023-07-17T00:16:29.489Z"}
+2023-07-17T00:16:29.561Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:29.559Z","created_at":"2023-07-17T00:16:29.559Z"}
+2023-07-17T00:16:29.573Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:29.572Z","created_at":"2023-07-17T00:16:29.572Z"}
+2023-07-17T00:16:29.442Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:16:29.476Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:16:29.545Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:16:29.683Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:29.674Z","created_at":"2023-07-17T00:16:29.674Z"}
+2023-07-17T00:16:29.745Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:29.744Z","created_at":"2023-07-17T00:16:29.744Z"}
+2023-07-17T00:16:29.758Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:29.756Z","created_at":"2023-07-17T00:16:29.756Z"}
+2023-07-17T00:16:29.743Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:16:29.735Z","created_at":"2023-07-17T00:16:29.735Z"}
+2023-07-17T00:16:29.783Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:16:29.805Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:16:29.833Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:16:29.844Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:16:29.843Z","created_at":"2023-07-17T00:16:29.843Z"}
+2023-07-17T00:16:29.849Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:16:30.097Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:16:30.125Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:16:30.127Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:16:30.135Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:16:30.143Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:16:30.148Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:16:46.375Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:16:46.402Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:16:46.466Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:16:46.517Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:46.510Z","created_at":"2023-07-17T00:16:46.510Z"}
+2023-07-17T00:16:46.576Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:46.575Z","created_at":"2023-07-17T00:16:46.575Z"}
+2023-07-17T00:16:46.596Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:16:46.594Z","created_at":"2023-07-17T00:16:46.594Z"}
+2023-07-17T00:16:46.671Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:16:46.710Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:16:46.727Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:16:46.740Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:16:46.747Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:16:46.751Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:16:46.745Z","created_at":"2023-07-17T00:16:46.745Z"}
+2023-07-17T00:16:46.775Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:46.764Z","created_at":"2023-07-17T00:16:46.764Z"}
+2023-07-17T00:16:46.793Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:16:46.815Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:16:46.836Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:16:46.844Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:16:46.842Z","created_at":"2023-07-17T00:16:46.842Z"}
+2023-07-17T00:16:46.847Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:16:46.831Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:46.830Z","created_at":"2023-07-17T00:16:46.830Z"}
+2023-07-17T00:16:46.842Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:16:46.841Z","created_at":"2023-07-17T00:16:46.841Z"}
+2023-07-17T00:16:47.163Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:16:47.175Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:16:47.176Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:16:47.184Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:16:47.193Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:16:47.197Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:18:22.043Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:18:22.075Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:18:22.134Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:18:22.752Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:18:22.744Z","created_at":"2023-07-17T00:18:22.744Z"}
+2023-07-17T00:18:22.793Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:18:22.816Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:18:22.841Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:18:22.848Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:18:22.847Z","created_at":"2023-07-17T00:18:22.847Z"}
+2023-07-17T00:18:22.852Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:18:22.833Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:18:22.828Z","created_at":"2023-07-17T00:18:22.828Z"}
+2023-07-17T00:18:22.888Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:18:22.885Z","created_at":"2023-07-17T00:18:22.885Z"}
+2023-07-17T00:18:22.902Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:18:22.901Z","created_at":"2023-07-17T00:18:22.901Z"}
+2023-07-17T00:18:22.845Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:18:22.836Z","created_at":"2023-07-17T00:18:22.836Z"}
+2023-07-17T00:18:22.914Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:18:22.912Z","created_at":"2023-07-17T00:18:22.912Z"}
+2023-07-17T00:18:22.928Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:18:22.926Z","created_at":"2023-07-17T00:18:22.926Z"}
+2023-07-17T00:18:23.164Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:18:23.192Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:18:23.225Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:18:23.233Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:18:23.238Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:18:23.398Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:18:23.424Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:18:23.426Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:18:23.434Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:18:23.442Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:18:23.447Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:19:03.796Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:19:03.815Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:19:03.853Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:19:03.898Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:19:03.893Z","created_at":"2023-07-17T00:19:03.893Z"}
+2023-07-17T00:19:03.933Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:19:03.932Z","created_at":"2023-07-17T00:19:03.932Z"}
+2023-07-17T00:19:03.942Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:19:03.939Z","created_at":"2023-07-17T00:19:03.939Z"}
+2023-07-17T00:19:03.970Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:19:03.966Z","created_at":"2023-07-17T00:19:03.966Z"}
+2023-07-17T00:19:04.013Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:19:04.010Z","created_at":"2023-07-17T00:19:04.010Z"}
+2023-07-17T00:19:04.020Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:19:04.019Z","created_at":"2023-07-17T00:19:04.019Z"}
+2023-07-17T00:19:03.963Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:19:03.959Z","created_at":"2023-07-17T00:19:03.959Z"}
+2023-07-17T00:19:04.001Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:19:04.020Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:19:04.032Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:19:04.047Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:19:04.047Z","created_at":"2023-07-17T00:19:04.047Z"}
+2023-07-17T00:19:04.051Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:19:04.133Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:19:04.153Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:19:04.157Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:19:04.163Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:19:04.166Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:19:04.236Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:19:04.251Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:19:04.253Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:19:04.261Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:19:04.265Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:19:04.268Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:22:21.181Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:22:21.217Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:22:21.229Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:22:21.251Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:22:21.259Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:22:21.632Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:22:21.623Z","created_at":"2023-07-17T00:22:21.623Z"}
+2023-07-17T00:22:21.676Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:22:21.702Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:22:21.734Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:22:21.748Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:22:21.747Z","created_at":"2023-07-17T00:22:21.747Z"}
+2023-07-17T00:22:21.753Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:22:21.676Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:22:21.669Z","created_at":"2023-07-17T00:22:21.669Z"}
+2023-07-17T00:22:21.731Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:22:21.728Z","created_at":"2023-07-17T00:22:21.728Z"}
+2023-07-17T00:22:21.749Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:22:21.748Z","created_at":"2023-07-17T00:22:21.748Z"}
+2023-07-17T00:22:21.870Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:22:21.862Z","created_at":"2023-07-17T00:22:21.862Z"}
+2023-07-17T00:22:21.924Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:22:21.922Z","created_at":"2023-07-17T00:22:21.922Z"}
+2023-07-17T00:22:21.934Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:22:21.933Z","created_at":"2023-07-17T00:22:21.933Z"}
+2023-07-17T00:22:21.865Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:22:21.945Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:22:21.961Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:22:22.375Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:22:22.402Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:22:22.404Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:22:22.411Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:22:22.419Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:22:22.423Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:27:06.682Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:27:06.720Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:27:06.737Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:27:06.750Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:27:06.758Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:27:07.298Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:07.289Z","created_at":"2023-07-17T00:27:07.289Z"}
+2023-07-17T00:27:07.354Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:07.352Z","created_at":"2023-07-17T00:27:07.352Z"}
+2023-07-17T00:27:07.364Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:07.363Z","created_at":"2023-07-17T00:27:07.363Z"}
+2023-07-17T00:27:07.323Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:27:07.315Z","created_at":"2023-07-17T00:27:07.315Z"}
+2023-07-17T00:27:07.370Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:27:07.409Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:27:07.462Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:27:07.475Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:27:07.473Z","created_at":"2023-07-17T00:27:07.473Z"}
+2023-07-17T00:27:07.480Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:27:07.409Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:07.400Z","created_at":"2023-07-17T00:27:07.400Z"}
+2023-07-17T00:27:07.495Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:07.493Z","created_at":"2023-07-17T00:27:07.493Z"}
+2023-07-17T00:27:07.506Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:07.505Z","created_at":"2023-07-17T00:27:07.505Z"}
+2023-07-17T00:27:07.710Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:27:07.732Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:27:07.739Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:27:08.044Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:27:08.069Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:27:08.071Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:27:08.079Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:27:08.087Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:27:08.091Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:27:26.778Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:27:26.795Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:27:26.817Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:27:26.827Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:27:26.836Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:27:27.049Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:27:27.127Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:27:27.138Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:27:27.423Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:27.417Z","created_at":"2023-07-17T00:27:27.417Z"}
+2023-07-17T00:27:27.475Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:27.474Z","created_at":"2023-07-17T00:27:27.474Z"}
+2023-07-17T00:27:27.485Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:27:27.484Z","created_at":"2023-07-17T00:27:27.484Z"}
+2023-07-17T00:27:27.476Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:27.465Z","created_at":"2023-07-17T00:27:27.465Z"}
+2023-07-17T00:27:27.542Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:27.535Z","created_at":"2023-07-17T00:27:27.535Z"}
+2023-07-17T00:27:27.554Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:27:27.552Z","created_at":"2023-07-17T00:27:27.552Z"}
+2023-07-17T00:27:27.478Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:27:27.471Z","created_at":"2023-07-17T00:27:27.471Z"}
+2023-07-17T00:27:27.514Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:27:27.539Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:27:27.569Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:27:27.575Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:27:27.574Z","created_at":"2023-07-17T00:27:27.574Z"}
+2023-07-17T00:27:27.581Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:27:27.874Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:27:27.886Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:27:27.887Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:27:27.894Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:27:27.903Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:27:27.907Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:28:00.779Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:28:00.800Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:28:00.813Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:28:00.827Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:28:00.833Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:28:00.994Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:28:00.987Z","created_at":"2023-07-17T00:28:00.987Z"}
+2023-07-17T00:28:01.035Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:28:01.056Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:28:01.088Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:28:01.100Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:28:01.095Z","created_at":"2023-07-17T00:28:01.095Z"}
+2023-07-17T00:28:01.106Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:28:01.170Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:01.147Z","created_at":"2023-07-17T00:28:01.147Z"}
+2023-07-17T00:28:01.225Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:01.222Z","created_at":"2023-07-17T00:28:01.222Z"}
+2023-07-17T00:28:01.249Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:01.247Z","created_at":"2023-07-17T00:28:01.247Z"}
+2023-07-17T00:28:01.463Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:01.458Z","created_at":"2023-07-17T00:28:01.458Z"}
+2023-07-17T00:28:01.500Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:01.498Z","created_at":"2023-07-17T00:28:01.498Z"}
+2023-07-17T00:28:01.511Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:01.510Z","created_at":"2023-07-17T00:28:01.510Z"}
+2023-07-17T00:28:01.536Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:28:01.553Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:28:01.565Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:28:01.641Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:28:01.699Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:28:01.701Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:28:01.713Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:28:01.729Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:28:01.737Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:28:22.390Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:28:22.427Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:28:22.449Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:28:22.462Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:28:22.471Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:28:22.470Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:28:22.499Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:28:22.511Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:28:22.695Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:22.687Z","created_at":"2023-07-17T00:28:22.687Z"}
+2023-07-17T00:28:22.742Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:22.740Z","created_at":"2023-07-17T00:28:22.740Z"}
+2023-07-17T00:28:22.754Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:28:22.751Z","created_at":"2023-07-17T00:28:22.751Z"}
+2023-07-17T00:28:22.863Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:28:22.854Z","created_at":"2023-07-17T00:28:22.854Z"}
+2023-07-17T00:28:22.905Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:28:22.923Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:28:22.939Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:28:22.944Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:28:22.943Z","created_at":"2023-07-17T00:28:22.943Z"}
+2023-07-17T00:28:22.947Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:28:22.953Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:22.948Z","created_at":"2023-07-17T00:28:22.948Z"}
+2023-07-17T00:28:22.998Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:22.997Z","created_at":"2023-07-17T00:28:22.997Z"}
+2023-07-17T00:28:23.006Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:28:23.005Z","created_at":"2023-07-17T00:28:23.005Z"}
+2023-07-17T00:28:23.265Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:28:23.287Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:28:23.289Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:28:23.296Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:28:23.303Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:28:23.308Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:29:12.371Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:29:12.388Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:29:12.397Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:29:12.366Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:29:12.385Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:29:12.395Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:29:12.405Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:29:12.419Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:29:12.585Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:29:12.583Z","created_at":"2023-07-17T00:29:12.583Z"}
+2023-07-17T00:29:12.602Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:29:12.601Z","created_at":"2023-07-17T00:29:12.601Z"}
+2023-07-17T00:29:12.608Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:29:12.608Z","created_at":"2023-07-17T00:29:12.608Z"}
+2023-07-17T00:29:12.589Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:29:12.586Z","created_at":"2023-07-17T00:29:12.586Z"}
+2023-07-17T00:29:12.606Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:29:12.618Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:29:12.637Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:29:12.644Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:29:12.643Z","created_at":"2023-07-17T00:29:12.643Z"}
+2023-07-17T00:29:12.647Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:29:12.613Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:29:12.606Z","created_at":"2023-07-17T00:29:12.606Z"}
+2023-07-17T00:29:12.649Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:29:12.647Z","created_at":"2023-07-17T00:29:12.647Z"}
+2023-07-17T00:29:12.658Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:29:12.657Z","created_at":"2023-07-17T00:29:12.657Z"}
+2023-07-17T00:29:12.978Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:29:12.985Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:29:12.985Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:29:12.992Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:29:13.000Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:29:13.003Z-error: Error updating doctor in DoctorRepository: []
+2023-07-17T00:30:23.999Z-error: Error getting all patients in patientRepository: []
+2023-07-17T00:30:24.049Z-error: Error creating a new patient in patientRepository: []
+2023-07-17T00:30:24.061Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:30:24.077Z-error: Error getting patient in patientRepository: []
+2023-07-17T00:30:24.087Z-error: Error updating patient in DoctorRepository: []
+2023-07-17T00:30:24.089Z-error: Error getting all appointments in appointmentRepository: []
+2023-07-17T00:30:24.127Z-error: Error creating a new appointment in appointmentRepository: []
+2023-07-17T00:30:24.143Z-error: Error getting appointment in appointmentRepository: []
+2023-07-17T00:30:24.325Z-info: New patient created succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:30:24.320Z","created_at":"2023-07-17T00:30:24.320Z"}
+2023-07-17T00:30:24.367Z-info: Patient updated succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:30:24.366Z","created_at":"2023-07-17T00:30:24.366Z"}
+2023-07-17T00:30:24.374Z-info: Patient deleted succesfully: {"id_paciente":1,"nombre":"Angela","apellido":"Nicols","identificacion":"123","telefono":"666-666-66","updated_at":"2023-07-17T00:30:24.373Z","created_at":"2023-07-17T00:30:24.373Z"}
+2023-07-17T00:30:24.357Z-info: New doctor created succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:30:24.349Z","created_at":"2023-07-17T00:30:24.349Z"}
+2023-07-17T00:30:24.417Z-info: Doctor updated succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:30:24.416Z","created_at":"2023-07-17T00:30:24.416Z"}
+2023-07-17T00:30:24.429Z-info: Doctor deleted succesfully: {"id_doctor":1,"nombre":"John","apellido":"Doe","identificacion":"123","especialidad":"Medicina general","consultorio":"101","correo":"john.doe@gmail.com","updated_at":"2023-07-17T00:30:24.427Z","created_at":"2023-07-17T00:30:24.427Z"}
+2023-07-17T00:30:24.569Z-info: New appointment created succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:30:24.563Z","created_at":"2023-07-17T00:30:24.563Z"}
+2023-07-17T00:30:24.600Z-error: Error creating a new appointment in appointmentService: []
+2023-07-17T00:30:24.620Z-error: Error getting appointment in appointmetnService: []
+2023-07-17T00:30:24.641Z-error: Error getting appointment in appointmentService: []
+2023-07-17T00:30:24.649Z-info: Appointment deleted succesfully: {"id_doctor":1,"id_cita":1,"id_paciente":100,"horario":"Lunes 17/07/2023 8:00","updated_at":"2023-07-17T00:30:24.648Z","created_at":"2023-07-17T00:30:24.648Z"}
+2023-07-17T00:30:24.652Z-error: Error deleting appointment in appointmentService: []
+2023-07-17T00:30:24.983Z-error: Error getting all doctors in doctorRepository: []
+2023-07-17T00:30:25.007Z-error: Error creating a new doctor in doctorRepository: []
+2023-07-17T00:30:25.009Z-error: Error creating a new doctor in DoctorService: [TypeError: Cannot read properties of undefined (reading 'length')]
+2023-07-17T00:30:25.018Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:30:25.025Z-error: Error getting doctor in doctorRepository: []
+2023-07-17T00:30:25.029Z-error: Error updating doctor in DoctorRepository: []

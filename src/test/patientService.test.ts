@@ -107,6 +107,7 @@ describe('PatientService', () => {
                 telefono: patient1.telefono
             };
             const createError = new CreateError('patient', 'patientRepository', "");
+            (patientRepository.getPatientByIdentificacion as jest.Mock).mockResolvedValue(undefined); 
             (patientRepository.createPatient as jest.Mock).mockRejectedValue(createError);
             await patientService.createPatient(patientReq)
             .catch((error)=>{

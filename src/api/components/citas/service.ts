@@ -1,8 +1,4 @@
-import { RecordNotFoundError, CustomError, CreateError, GetAllError, GetError, DeleteError } from '../../../utils/customError';
-import { DoctorRepository } from '../doctores/repository';
-import { PatientRepository } from '../pacientes/repository';
-import { DoctorService, DoctorServiceImpl } from '../doctores/service';
-import { PatientService, PatientServiceImpl } from '../pacientes/service';
+import { RecordNotFoundError, CreateError, GetAllError, GetError, DeleteError } from '../../../utils/customError';
 import { Appointment, AppointmentDBInsert, AppointmentReq, AppointmentRes} from './model'
 import { AppointmentRepository } from './repository';
 import { Patient } from '../pacientes/model';
